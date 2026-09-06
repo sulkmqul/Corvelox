@@ -1,2 +1,5 @@
 # Corvelox
-a language training application for android
+単語暗記アプリケーション。
+Corveloxは、corvusとveloxの造語、カラスのように頭がよく、迅速に暗記できることを願って。
+
+
