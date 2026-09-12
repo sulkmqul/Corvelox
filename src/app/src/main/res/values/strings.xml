@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Corvelox</string>
+
+    <string name="word_list_name">wordlist.json</string>
+    <string name="word_shelf_all">all.json</string>
+    <string name="word_shelf_level1">lv1.json</string>
+    <string name="word_shelf_level2">lv2.json</string>
+    <string name="word_shelf_level3">lv3.json</string>
+
 </resources>
