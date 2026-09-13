@@ -32,7 +32,7 @@ python main.py --input INPUT --output OUTPUT --size SIZE [--level LEVEL] [--pref
 python main.py --input toeic_vocab_3000_complete.json --output bundles.json --size 10
 ```
 
-IDが1から順番に並んでいる場合、束の名前は`1-10`、`11-20`のようになります。
+束の名前は`[001]`、`[002]`のようになります。
 
 ### levelが1の単語を10件ずつ分割
 
@@ -48,7 +48,7 @@ python main.py --input toeic_vocab_3000_complete.json --output bundles_level1.js
 python main.py --input toeic_vocab_3000_complete.json --output bundles_toeic.json --size 10 --prefix "TOEIC"
 ```
 
-束の名前は`TOEIC 1 - 10`のようになります。
+束の名前は`[TOEIC - 001]`、`[TOEIC - 002]`のようになります。
 
 ### levelとprefixを組み合わせる
 
@@ -89,20 +89,23 @@ python main.py --help
 ```json
 [
   {
-    "name": "TOEIC 1 - 5",
+    "id": "c61dc2f3-a3ea-4f83-8bc1-837f671ec728",
+    "name": "[TOEIC - 001]",
     "idList": [1, 5]
   },
   {
-    "name": "TOEIC 6 - 6",
+    "id": "932ad5fe-d548-421a-963f-da882fe7df58",
+    "name": "[TOEIC - 002]",
     "idList": [6]
   }
 ]
 ```
 
 - 入力配列の順序を維持します。IDの並べ替え、欠番の補完、重複の除去は行いません。
-- `name`には束の先頭と末尾のIDを使用します。
-- prefix指定時の形式は`prefix 開始id - 終了id`です。prefixなしの場合は`開始id-終了id`です。
-- 最後の束は、指定件数に満たなくても出力します。1件だけの束では開始IDと終了IDが同じになります。
+- `id`には束ごとに個別生成したUUID v4の文字列を設定します。追加オプションは不要です。同じ入力でも実行ごとに新しいUUIDになります。出力例のUUIDは例示です。
+- `name`には出力順に1から始まる連番を使用します。levelで絞り込んだ場合も最初の束は1です。連番は最低3桁のゼロ埋めとし、1000以降は4桁以上で表示します。
+- prefix指定時の形式は`[prefix - 001]`です。prefix省略・空文字列の場合は`[001]`です。角括弧も名前に含まれます。
+- 最後の束は、指定件数に満たなくても出力し、同様に連番を付けます。
 - 対象が0件の場合は`[]`を出力します。
 - 出力はUTF-8・インデント付きJSONです。
 

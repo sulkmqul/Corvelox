@@ -4,9 +4,9 @@ import android.content.res.AssetManager
 import androidx.lifecycle.ViewModel
 import com.sulkmqul.corvelox.CorveloxEventService
 import com.sulkmqul.corvelox.CorveloxViewId
+import com.sulkmqul.corvelox.data.LearningHistoryService
 import com.sulkmqul.corvelox.data.QuestionService
 import com.sulkmqul.corvelox.data.WordBookService
-import com.sulkmqul.corvelox.data.WordLevel
 import com.sulkmqul.corvelox.data.WordShelfData
 import com.sulkmqul.corvelox.data.WordShelfType
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -23,7 +23,8 @@ import javax.inject.Inject
 public class ShelfManuViewModel @Inject constructor(
     private val bookService: WordBookService,
     private val questionService: QuestionService,
-    private val eventService: CorveloxEventService
+    private val eventService: CorveloxEventService,
+    private val historyService: LearningHistoryService
 ): ViewModel() {
 
 
@@ -50,6 +51,10 @@ public class ShelfManuViewModel @Inject constructor(
             }
             else {
                 questionService.createShelf(am, data)
+
+                //選択したら履歴で保存しておく
+                historyService.addShelfHistory(data.id)
+
             }
         }
 
@@ -57,4 +62,16 @@ public class ShelfManuViewModel @Inject constructor(
 
     }
 
+    /**
+     * 練習を開始した直前の画面に戻るよう要求します。
+     * @return Unit。
+     */
+    public fun returnLevelList() {
+        eventService.changePrevView()
+    }
+
+
+    public fun checkShelfHistory(id: String): Boolean {
+        return historyService.checkShelfHistoryExists(id)
+    }
 }

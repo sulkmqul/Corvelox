@@ -1,6 +1,7 @@
 package com.sulkmqul.corvelox.data
 
 import android.content.res.AssetManager
+import android.printservice.PrintService
 import javax.inject.Inject
 import javax.inject.Singleton
 
@@ -12,7 +13,8 @@ public data class QuestionData(
 
 @Singleton
 public class QuestionService @Inject constructor(
-    private val bookService: WordBookService
+    private val bookService: WordBookService,
+    private val historyService: LearningHistoryService
 ) {
 
     private var questionData: QuestionData? = null
@@ -36,6 +38,14 @@ public class QuestionService @Inject constructor(
         val wlist = bookService.createQuestionRandom(am, level)
         questionData = QuestionData(title, wlist)
 
+    }
+
+    /**
+     * bookmarkに保存した問題の作成
+     */
+    public suspend fun createBookmark(am: AssetManager, title:String = "") {
+        val wlist = bookService.createQuestionFromBookmark(am)
+        questionData = QuestionData(title, wlist)
     }
 
 

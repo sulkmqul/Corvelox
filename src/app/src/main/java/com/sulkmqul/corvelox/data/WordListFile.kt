@@ -2,6 +2,8 @@ package com.sulkmqul.corvelox.data
 
 import android.content.res.AssetManager
 import android.util.JsonReader
+import android.util.JsonToken
+import android.util.Log
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
@@ -42,7 +44,29 @@ public enum class PartOfSpeech {
     determiner,
 
     /** 助動詞 */
-    auxiliary,
+    auxiliary;
+
+    companion object {
+        fun toText(type: PartOfSpeech): String {
+            val dmap: Map<PartOfSpeech, String> = mapOf(
+                PartOfSpeech.noun to "名",
+                PartOfSpeech.verb to "動",
+                PartOfSpeech.adjective to "形容",
+                PartOfSpeech.adverb to "副",
+                PartOfSpeech.pronoun to "代名",
+                PartOfSpeech.preposition to "前置",
+                PartOfSpeech.conjunction to "接続",
+                PartOfSpeech.determiner to "限定",
+                PartOfSpeech.auxiliary to "助動",
+            )
+
+            var s = dmap[type]
+            if(s == null) {
+                s = "熟語"
+            }
+            return s
+        }
+    }
 }
 
 public enum class WordLevel(val code:Int) {
@@ -64,7 +88,10 @@ public enum class WordLevel(val code:Int) {
 public data class WordMeaning(
     public val meaning: String,
     public val partOfSpeech: PartOfSpeech,
-)
+) {
+
+
+}
 
 /**
  * 単語帳の1項目を保持します。
@@ -163,6 +190,7 @@ public abstract class BaseWordList {
                 } catch (exception: CancellationException) {
                     throw exception
                 } catch (exception: Exception) {
+                    exception.printStackTrace()
                     throw IllegalArgumentException(
                         "Failed to parse word at index $index",
                         exception,
@@ -360,12 +388,21 @@ public abstract class BaseWordList {
 
         reader.beginObject()
         while (reader.hasNext()) {
-            when (reader.nextName()) {
+            val name = reader.nextName()
+            when (name) {
                 KEY_ID -> id = reader.nextInt()
                 KEY_WORD -> word = reader.nextString()
                 KEY_TYPE -> type = readWordType(reader.nextString())
                 KEY_MEANINGS -> meanings = readMeanings(reader)
-                KEY_IPA -> ipa = reader.nextString()
+                //KEY_IPA -> ipa = reader.nextString()
+                KEY_IPA -> {
+                    //phaseのipaはnullです
+                    if (reader.peek() == JsonToken.NULL) {
+                        reader.nextNull()
+                    } else {
+                        ipa = reader.nextString()
+                    }
+                }
                 KEY_EXAMPLE_EN -> exampleEn = reader.nextString()
                 KEY_EXAMPLE_JA -> exampleJa = reader.nextString()
                 KEY_LEVEL -> level = reader.nextInt()

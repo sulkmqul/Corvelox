@@ -1,5 +1,6 @@
 package com.sulkmqul.corvelox.data
 import android.content.res.AssetManager
+import android.util.Log
 import javax.inject.Inject
 import javax.inject.Singleton
 
@@ -23,7 +24,9 @@ public enum class WordShelfType(val code: Int) {
  * 単語帳管理サービス
  */
 @Singleton
-public class WordBookService @Inject constructor() {
+public class WordBookService @Inject constructor(
+    private val historyService: LearningHistoryService
+) {
 
     public enum class SrcType {
         File,
@@ -77,11 +80,27 @@ public class WordBookService @Inject constructor() {
         val fp = WordListAsset(am, wordListPath)
 
         val ret = fp.readWordsById(shelf.idList.toIntArray())
+
         ret.onSuccess { ans ->
             return ans
         }
+        return emptyList()
+    }
 
+    /**
+     * お気に入りから質問の作成
+     * @param
+     */
+    public suspend fun createQuestionFromBookmark(am: AssetManager): List<Word> {
 
+        val fp = WordListAsset(am, wordListPath)
+
+        val ids = historyService.historyData.bookmarkWordList.toIntArray()
+        val ret = fp.readWordsById(ids)
+
+        ret.onSuccess { ans ->
+            return ans
+        }
         return emptyList()
     }
 
@@ -92,7 +111,9 @@ public class WordBookService @Inject constructor() {
     public suspend fun createQuestionRandom(am: AssetManager, level: WordLevel? = null, size: Int = 20): List<Word> {
 
         //指定idのリスト作成
-        val idlist = createRandomList(am, level, size).getOrNull()
+        val result = createRandomList(am, level, size)
+        val idlist = result.getOrNull()
+
         if(idlist == null) {
             return emptyList()
         }
@@ -125,7 +146,7 @@ public class WordBookService @Inject constructor() {
 
         //指定levelのshelfを読み込み
         val path = pathMap[st]!!
-        val sfp = WordShelfAsset(am, wordListPath)
+        val sfp = WordShelfAsset(am, path)
         val ret = sfp.readWordShelfFile()
 
         //属するidのランダムに並び変え、指定数を取得
@@ -136,7 +157,7 @@ public class WordBookService @Inject constructor() {
         }
 
         if(ans == null) {
-            return Result.failure(Exception(""))
+            return Result.failure(Exception("mp create data"))
         }
 
         return Result.success(ans)

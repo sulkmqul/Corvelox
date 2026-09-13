@@ -17,6 +17,7 @@ import java.nio.charset.StandardCharsets
  * @param idList 単語棚に所属する単語のID一覧
  */
 public data class WordShelfData(
+    public val id: String,
     public val name: String,
     public val idList: List<Int>,
 )
@@ -89,12 +90,14 @@ public abstract class BaseWordShelf {
      * @return 読み込んだ単語棚
      */
     private fun readShelf(reader: JsonReader): WordShelfData {
+        var id: String? = null
         var name: String? = null
         var idList: List<Int>? = null
 
         reader.beginObject()
         while (reader.hasNext()) {
             when (reader.nextName()) {
+                KEY_ID -> id = reader.nextString()
                 KEY_NAME -> name = reader.nextString()
                 KEY_ID_LIST -> idList = readIdList(reader)
                 else -> reader.skipValue()
@@ -103,6 +106,7 @@ public abstract class BaseWordShelf {
         reader.endObject()
 
         return WordShelfData(
+            id = requireNotNull(id) { "Missing required field: $KEY_NAME" },
             name = requireNotNull(name) { "Missing required field: $KEY_NAME" },
             idList = requireNotNull(idList) { "Missing required field: $KEY_ID_LIST" },
         )
@@ -126,6 +130,7 @@ public abstract class BaseWordShelf {
 
     /** JSON解析で使用する項目名を保持します。 */
     private companion object {
+        private const val KEY_ID = "id"
         private const val KEY_NAME = "name"
         private const val KEY_ID_LIST = "idList"
     }

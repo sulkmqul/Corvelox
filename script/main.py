@@ -2,6 +2,7 @@
 
 import argparse
 import json
+import uuid
 from pathlib import Path
 
 
@@ -23,7 +24,7 @@ def create_bundles(words, size, level=None, prefix=None):
         prefix: 束の名前に付ける文字列。省略または空文字列の場合は付けない。
 
     Returns:
-        nameとidListを持つ辞書の配列。
+        UUID文字列のid、name、idListを持つ辞書の配列。
     """
     if type(size) is not int or size <= 0:
         raise ValueError("sizeは1以上の整数である必要があります")
@@ -44,14 +45,14 @@ def create_bundles(words, size, level=None, prefix=None):
         ids.append(word["id"])
 
     bundles = []
-    for start in range(0, len(ids), size):
+    for index, start in enumerate(range(0, len(ids), size), start=1):
         group = ids[start : start + size]
         name = (
-            f"{prefix} {group[0]} - {group[-1]}"
+            f"{prefix} - {index:03d}"
             if prefix
-            else f"{group[0]}-{group[-1]}"
+            else f"{index:03d}"
         )
-        bundles.append({"name": name, "idList": group})
+        bundles.append({"id": str(uuid.uuid4()), "name": name, "idList": group})
     return bundles
 
 

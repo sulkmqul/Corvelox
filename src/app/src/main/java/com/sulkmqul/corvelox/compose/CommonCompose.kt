@@ -14,16 +14,16 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
 @Composable
-fun CvxButton(modifier: Modifier, onClick: () -> Unit, content: @Composable RowScope.() -> Unit){
-    Button(onClick, modifier, shape = RoundedCornerShape(16.dp)) {
+fun CvxButton(modifier: Modifier, onClick: () -> Unit, enabled: Boolean = true, content: @Composable RowScope.() -> Unit){
+    Button(onClick, modifier, shape = RoundedCornerShape(16.dp), enabled = enabled) {
         content()
     }
 }
 
 
 @Composable
-fun CvxTextButton(text: String, modifier: Modifier, onClick: () -> Unit){
-    Button(onClick, modifier, shape = RoundedCornerShape(16.dp)) {
+fun CvxTextButton(text: String, modifier: Modifier, onClick: () -> Unit, enabled: Boolean = true){
+    Button(onClick, modifier, shape = RoundedCornerShape(16.dp), enabled = enabled) {
         CvxTextN(text)
     }
 }

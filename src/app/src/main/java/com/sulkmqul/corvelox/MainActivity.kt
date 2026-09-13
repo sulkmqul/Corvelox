@@ -9,25 +9,27 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
-import androidx.compose.runtime.collectAsState
-import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.res.stringResource
+import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.repeatOnLifecycle
 import androidx.navigation.NavType
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
+import com.sulkmqul.corvelox.data.LearningHistoryService
 import com.sulkmqul.corvelox.data.WordBookService
 import com.sulkmqul.corvelox.data.WordShelfType
 import com.sulkmqul.corvelox.learning.LearningView
-import com.sulkmqul.corvelox.shelflist.LevelSelecCompose
+import com.sulkmqul.corvelox.shelflist.LevelSelectCompose
 import com.sulkmqul.corvelox.shelflist.ShelfMenuView
 import com.sulkmqul.corvelox.title.TitleViewCompose
 import com.sulkmqul.corvelox.ui.theme.CorveloxTheme
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.runBlocking
 import javax.inject.Inject
 
+/** アプリの画面とナビゲーション履歴を管理する Activity。 */
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
 
@@ -35,6 +37,9 @@ class MainActivity : ComponentActivity() {
     lateinit var corveloxEventService: CorveloxEventService
     @Inject
     lateinit var wordService: WordBookService
+
+    @Inject
+    lateinit var historyService: LearningHistoryService
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -47,19 +52,19 @@ class MainActivity : ComponentActivity() {
 
 
 
-                val vp by corveloxEventService.viewState.collectAsState()
-
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
 
-                    MainScreen(Modifier.padding(innerPadding), vp)
+                    MainScreen(Modifier.padding(innerPadding))
                 }
             }
         }
     }
 
 
+    /**
+     * アプリ全体の初期化
+     */
     private fun initialize() {
-
 
         wordService.initialize(WordBookService.SrcType.Assets,
             getString(R.string.word_list_name),
@@ -69,21 +74,42 @@ class MainActivity : ComponentActivity() {
             getString(R.string.word_shelf_level3),
 
             )
+
+        val context = this
+        runBlocking {
+            historyService.initialize(context)
+        }
     }
 
+    /**
+     * 遷移要求を処理し、現在の画面を表示する。
+     *
+     * @param modifier 画面全体に適用するレイアウト指定。
+     * @return Unit。
+     */
     @Composable
-    private fun MainScreen(modifier: Modifier, vp: ViewParam) {
+    private fun MainScreen(modifier: Modifier) {
 
         val navCon = rememberNavController()
 
-        LaunchedEffect(vp) {
-            val uri = vp.craeteUrl()
-            if (navCon.currentDestination?.route != uri) {
-                navCon.navigate(uri) {
-                    launchSingleTop = true
+        LaunchedEffect(navCon) {
+            lifecycle.repeatOnLifecycle(Lifecycle.State.RESUMED) {
+                corveloxEventService.navigationEvents.collect { event ->
+                    when (event) {
+                        is NavigationEvent.Navigate -> {
+                            navCon.navigate(event.destination.craeteUrl()) {
+                                launchSingleTop = true
+                            }
+                        }
+                        NavigationEvent.Back -> {
+                            // 最初の画面はバックスタックから取り除かない。
+                            if (navCon.previousBackStackEntry != null) {
+                                navCon.popBackStack()
+                            }
+                        }
+                    }
                 }
             }
-
         }
 
         NavHost(
@@ -96,7 +122,7 @@ class MainActivity : ComponentActivity() {
             }
             composable(CorveloxViewId.LevelMenu.name) {
 
-                LevelSelecCompose(Modifier)
+                LevelSelectCompose(Modifier)
             }
             composable("${CorveloxViewId.ShelfMenu.name}/{level}",
                 arguments = listOf(
@@ -116,4 +142,3 @@ class MainActivity : ComponentActivity() {
         }
     }
 }
-
