@@ -11,9 +11,22 @@ import javax.inject.Singleton
  */
 public enum class CorveloxViewId {
     Title,
-    Menu,
+    LevelMenu,
+    ShelfMenu,
     WordLearning,
     Result,
+}
+
+public data class ViewParam(
+    public val viewId: CorveloxViewId,
+    public val param: Any? = null
+) {
+    public fun craeteUrl(): String {
+        if(param == null) {
+            return viewId.name
+        }
+        return "${viewId.name}/${param}"
+    }
 }
 
 /**
@@ -25,13 +38,13 @@ public class CorveloxEventService @Inject constructor() {
     /**
      * 画面状態
      */
-    private val viewStateFlow: MutableStateFlow<CorveloxViewId> = MutableStateFlow(CorveloxViewId.Title)
+    private val viewStateFlow: MutableStateFlow<ViewParam> = MutableStateFlow(ViewParam(CorveloxViewId.Title))
     public val viewState = viewStateFlow.asStateFlow()
 
     /**
      * 画面遷移申請
      */
-    public fun changeView(viewid: CorveloxViewId) {
-        viewStateFlow.value = viewid
+    public fun changeView(viewid: CorveloxViewId, param: Any? = null) {
+        viewStateFlow.value = viewStateFlow.value.copy(viewid, param)
     }
 }

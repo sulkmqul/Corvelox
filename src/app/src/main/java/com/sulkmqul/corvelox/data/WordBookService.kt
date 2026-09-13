@@ -1,12 +1,9 @@
 package com.sulkmqul.corvelox.data
 import android.content.res.AssetManager
-import android.hardware.Camera
-import android.util.Log
-import java.util.Dictionary
 import javax.inject.Inject
 import javax.inject.Singleton
 
-enum class WordShelfType(val code: Int) {
+public enum class WordShelfType(val code: Int) {
     All(999),
     Level1(WordLevel.Level1.code),
     Level2(WordLevel.Level2.code),
@@ -18,7 +15,6 @@ enum class WordShelfType(val code: Int) {
         fun fromWordLevel(n: WordLevel): WordShelfType? = WordShelfType.entries.find { it.code == n.code }
     }
 }
-
 
 
 
@@ -54,7 +50,7 @@ public class WordBookService @Inject constructor() {
     /**
      * Shelfの読み込み
      */
-    public suspend fun loadShelf(am: AssetManager, type: WordShelfType): List<WordShelData> {
+    public suspend fun loadShelf(am: AssetManager, type: WordShelfType): List<WordShelfData> {
 
         //読み込みpathの取得
         val path = pathMap[type]
@@ -76,7 +72,7 @@ public class WordBookService @Inject constructor() {
      * 質問の作成
      * @param
      */
-    public suspend fun createQuestionFromShelf(am: AssetManager, shelf: WordShelData): List<Word> {
+    public suspend fun createQuestionFromShelf(am: AssetManager, shelf: WordShelfData): List<Word> {
 
         val fp = WordListAsset(am, wordListPath)
 

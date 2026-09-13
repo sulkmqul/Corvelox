@@ -16,7 +16,7 @@ import java.nio.charset.StandardCharsets
  * @param name 単語棚の名前
  * @param idList 単語棚に所属する単語のID一覧
  */
-public data class WordShelData(
+public data class WordShelfData(
     public val name: String,
     public val idList: List<Int>,
 )
@@ -40,7 +40,7 @@ public abstract class BaseWordShelf {
      *
      * @return 成功時は単語棚一覧、失敗時は原因となった例外を保持する[Result]
      */
-    public suspend fun readWordShelfFile(): Result<List<WordShelData>> =
+    public suspend fun readWordShelfFile(): Result<List<WordShelfData>> =
         withContext(Dispatchers.IO) {
             try {
                 val shelves = openReader().use { reader ->
@@ -63,8 +63,8 @@ public abstract class BaseWordShelf {
      * @param reader 読み込み元のJSONリーダー
      * @return 読み込んだ単語棚一覧。配列が空の場合は空の一覧
      */
-    private fun readShelves(reader: JsonReader): List<WordShelData> {
-        val shelves = mutableListOf<WordShelData>()
+    private fun readShelves(reader: JsonReader): List<WordShelfData> {
+        val shelves = mutableListOf<WordShelfData>()
         reader.beginArray()
         while (reader.hasNext()) {
             try {
@@ -88,7 +88,7 @@ public abstract class BaseWordShelf {
      * @param reader 読み込み元のJSONリーダー
      * @return 読み込んだ単語棚
      */
-    private fun readShelf(reader: JsonReader): WordShelData {
+    private fun readShelf(reader: JsonReader): WordShelfData {
         var name: String? = null
         var idList: List<Int>? = null
 
@@ -102,7 +102,7 @@ public abstract class BaseWordShelf {
         }
         reader.endObject()
 
-        return WordShelData(
+        return WordShelfData(
             name = requireNotNull(name) { "Missing required field: $KEY_NAME" },
             idList = requireNotNull(idList) { "Missing required field: $KEY_ID_LIST" },
         )

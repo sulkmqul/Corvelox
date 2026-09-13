@@ -19,6 +19,9 @@ import com.sulkmqul.corvelox.R
 import com.sulkmqul.corvelox.compose.CvxTextButton
 import androidx.hilt.navigation.compose.hiltViewModel
 
+/**
+ * タイトル画面
+ */
 @Composable
 public fun TitleViewCompose(modifier: Modifier) {
 
@@ -40,7 +43,7 @@ public fun TitleViewCompose(modifier: Modifier) {
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.spacedBy(10.dp)
         ) {
-            TitleMenuButton("Start", Modifier, { vm.navigate(CorveloxViewId.Menu) })
+            TitleMenuButton("Start", Modifier, { vm.navigate(CorveloxViewId.LevelMenu) })
         }
     }
 }
