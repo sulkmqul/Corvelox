@@ -401,6 +401,7 @@ public abstract class BaseWordList {
                         reader.nextNull()
                     } else {
                         ipa = reader.nextString()
+                        ipa = ipa.removePrefix("/").removeSuffix("/")
                     }
                 }
                 KEY_EXAMPLE_EN -> exampleEn = reader.nextString()

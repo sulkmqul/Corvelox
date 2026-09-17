@@ -37,6 +37,7 @@ public class LearningViewModel @Inject constructor(
         bookmarkEnabledStateFlow.value = checkBookmark(state.value.currentWord?.id)
     }
 
+
     /**
      * 表示を一段階進めます。
      * @return Unit。

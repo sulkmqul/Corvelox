@@ -1,5 +1,7 @@
 package com.sulkmqul.corvelox.learning
 
+import android.speech.tts.TextToSpeech
+import android.util.Log
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -17,6 +19,7 @@ import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.DisposableEffect
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.collectAsState
@@ -25,10 +28,12 @@ import androidx.compose.runtime.key
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberUpdatedState
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.semantics.clearAndSetSemantics
 import androidx.compose.ui.text.SpanStyle
 import androidx.compose.ui.text.buildAnnotatedString
@@ -41,6 +46,7 @@ import com.sulkmqul.corvelox.compose.CvxTextButton
 import com.sulkmqul.corvelox.data.PartOfSpeech
 import com.sulkmqul.corvelox.data.Word
 import com.sulkmqul.corvelox.data.WordMeaning
+import java.util.Locale
 
 /**
  * ViewModelに接続した単語練習画面を表示します。
@@ -50,13 +56,42 @@ import com.sulkmqul.corvelox.data.WordMeaning
  */
 @Composable
 public fun LearningView(modifier: Modifier = Modifier) {
+    val context = LocalContext.current
     val vm: LearningViewModel = hiltViewModel()
     val state by vm.uiState.collectAsState()
     val endProc: () -> Unit = { vm.returnShelfList() }
     val currentEndProc by rememberUpdatedState(endProc)
 
+    var tts by remember {
+        mutableStateOf<TextToSpeech?>(null)
+    }
+    // TextToSpeechを初期化
+    DisposableEffect(Unit) {
+
+        tts = TextToSpeech(context) { status ->
+            if (status == TextToSpeech.SUCCESS) {
+                tts?.language = Locale.ENGLISH
+                state.currentWord?.let {
+                    tts?.speak(it.word, TextToSpeech.QUEUE_FLUSH, null, "word")
+                }
+            }
+        }
+
+        onDispose {
+            tts?.stop()
+            tts?.shutdown()
+            tts = null
+        }
+    }
+
     LaunchedEffect(state.isFinished) {
         if (vm.consumeCompletion()) currentEndProc()
+    }
+    //単語変更時にしゃべらせる
+    LaunchedEffect(state.currentWord) {
+        state.currentWord?.let {
+            tts?.speak(it.word, TextToSpeech.QUEUE_FLUSH, null, "word")
+        }
     }
     LearningScreen(
         vm,
@@ -67,6 +102,7 @@ public fun LearningView(modifier: Modifier = Modifier) {
         onPreviousWord = vm::previousWord,
         onNextWord = vm::nextWord,
         onSaveWord = {vm.addBookmark(it)},
+        onVoice = { tts?.speak(it, TextToSpeech.QUEUE_FLUSH, null, "word")},
         modifier = modifier,
     )
 }
@@ -92,11 +128,11 @@ internal fun LearningScreen(
     onPreviousWord: () -> Unit,
     onNextWord: () -> Unit,
     onSaveWord: (id: Int) -> Unit,
+    onVoice: (text: String) -> Unit,
     modifier: Modifier = Modifier,
 ) {
 
     val saveFlag by vm.bookmarkEnabledState.collectAsState()
-
 
 
     Column(
@@ -123,7 +159,7 @@ internal fun LearningScreen(
                 else -> key(state.wordIndex) {
                     // 単語が変わると各領域のスクロール位置も初期化します。
                     Column(Modifier.weight(1f), horizontalAlignment = Alignment.CenterHorizontally) {
-                        LearningWordHeader(word, Modifier
+                        LearningWordHeader(word, onVoice, Modifier
                             .fillMaxWidth()
                             .weight(1f))
                         Spacer(Modifier.height(12.dp))
@@ -131,7 +167,7 @@ internal fun LearningScreen(
                         LearningMeaningList(
                             word.meanings,
                             state.revealedMeaningCount,
-                            Modifier.weight(1.5f, fill = false),
+                            Modifier.weight(1.0f),
                         )
                         Spacer(Modifier.height(32.dp))
                         LearningExampleSectionEx(
@@ -189,7 +225,7 @@ private fun LearningControls(
  * @return Unit。
  */
 @Composable
-private fun LearningWordHeader(word: Word, modifier: Modifier = Modifier) {
+private fun LearningWordHeader(word: Word, onVoice: (text: String) -> Unit, modifier: Modifier = Modifier) {
     Column(
         modifier
             .verticalScroll(rememberScrollState())
@@ -202,6 +238,7 @@ private fun LearningWordHeader(word: Word, modifier: Modifier = Modifier) {
             style = MaterialTheme.typography.displayLarge,
             fontWeight = FontWeight.Bold,
             textAlign = TextAlign.Center,
+            modifier = Modifier.clickable(onClick = { onVoice(word.word) })
         )
         if (word.ipa.isNotBlank()) Text(word.ipa, textAlign = TextAlign.Center)
     }
