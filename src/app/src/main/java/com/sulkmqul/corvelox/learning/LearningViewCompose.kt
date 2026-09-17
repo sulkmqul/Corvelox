@@ -12,10 +12,13 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
+import androidx.compose.material3.ButtonColors
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.MutableState
 import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.key
@@ -92,13 +95,17 @@ internal fun LearningScreen(
     modifier: Modifier = Modifier,
 ) {
 
+    val saveFlag by vm.bookmarkEnabledState.collectAsState()
+
+
+
     Column(
         modifier = modifier
             .fillMaxSize()
             .padding(20.dp),
         horizontalAlignment = Alignment.CenterHorizontally,
     ) {
-        LearningControls(!vm.checkBookmark(state.currentWord?.id), onBack, onPreviousWord, { state.currentWord?.id?.let{ onSaveWord(it) } }, onNextWord)
+        LearningControls(saveFlag, onBack, onPreviousWord, { state.currentWord?.id?.let{ onSaveWord(it) } }, onNextWord)
         // 操作ボタンと周辺の余白は、意味を開示するタップ領域から外します。
         Column(
             Modifier
@@ -157,6 +164,11 @@ private fun LearningControls(
     onSaveWord: () -> Unit,
     onNextWord: () -> Unit,
 ) {
+    val text = if (!saveEnabled) "保存" else "削除"
+    val bcol = if (!saveEnabled) ButtonDefaults.buttonColors() else ButtonDefaults.buttonColors().copy(containerColor = Color(0xFF82546C))
+
+
+
     Column(Modifier.fillMaxWidth()) {
         Box(Modifier.fillMaxWidth()) {
             CvxTextButton("戻る", Modifier.align(Alignment.TopStart), onBack)
@@ -164,7 +176,7 @@ private fun LearningControls(
         Spacer(Modifier.height(10.dp))
         Box(Modifier.fillMaxWidth()) {
             CvxTextButton("←", Modifier.align(Alignment.TopStart), onPreviousWord)
-            CvxTextButton("保存", Modifier.align(Alignment.TopCenter), onSaveWord, saveEnabled)
+            CvxTextButton(text, Modifier.align(Alignment.TopCenter), onSaveWord, color = bcol)
             CvxTextButton("→", Modifier.align(Alignment.TopEnd), onNextWord)
         }
     }

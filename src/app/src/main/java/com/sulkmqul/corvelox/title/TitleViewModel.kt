@@ -23,12 +23,14 @@ class TitleViewModel @Inject constructor(
     public fun clearHistory() {
         viewModelScope.launch {
             historyService.clearShelfHistory()
+            eventService.showSnackbar("履歴を削除しました")
         }
     }
 
     public fun clearBookmarkWord() {
         viewModelScope.launch {
             historyService.clearBookmarkWord()
+            eventService.showSnackbar("お気に入りを削除しました")
         }
     }
 }

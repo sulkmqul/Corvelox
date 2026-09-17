@@ -3,6 +3,8 @@ package com.sulkmqul.corvelox.compose
 import androidx.compose.foundation.layout.RowScope
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonColors
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -22,8 +24,8 @@ fun CvxButton(modifier: Modifier, onClick: () -> Unit, enabled: Boolean = true, 
 
 
 @Composable
-fun CvxTextButton(text: String, modifier: Modifier, onClick: () -> Unit, enabled: Boolean = true){
-    Button(onClick, modifier, shape = RoundedCornerShape(16.dp), enabled = enabled) {
+fun CvxTextButton(text: String, modifier: Modifier, onClick: () -> Unit, enabled: Boolean = true, color: ButtonColors = ButtonDefaults.buttonColors()){
+    Button(onClick, modifier, shape = RoundedCornerShape(16.dp), enabled = enabled, colors = color) {
         CvxTextN(text)
     }
 }

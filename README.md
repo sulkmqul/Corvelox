@@ -1,13 +1,13 @@
 # Corvelox
-<img src="img/logo.png">
+<img src="img/logo.png" width=60%>
 
 Android向けの単語暗記アプリケーション。  
 カラスのように頭がよく、素早く暗記できることを願って命名
 
 昨今のAIコーディングの感じを掴むため、AIの手綱を握りつつ時短の道を探るため、今まで欲しかった単語帳アプリを作成。  
 
-データ作成においてはAIの多大なる貢献を受けています。  
-コーディング面は手綱を握りつつほどほどお任せ。
+コーディング面ではほどほど、
+データ作成においては多大なる貢献をAIから受けています。  
 
 
 ## 仕様技術
@@ -31,3 +31,6 @@ Android向けの単語暗記アプリケーション。
 - 学習履歴：アプリ内部ストレージ `files/history.json`
 
 
+## Author 
+sulkmqul  
+[Blog](http://blog.livedoor.jp/serialpath/)

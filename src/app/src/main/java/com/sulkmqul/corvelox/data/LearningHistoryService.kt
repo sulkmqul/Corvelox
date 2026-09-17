@@ -61,8 +61,17 @@ public class LearningHistoryService @Inject constructor() {
      * お気に入りに追加
      */
     public suspend fun addBookmark(id: Int) {
+
         learningHistoryData.addBookmarkWord(id)
 
+        writeHistory()
+    }
+
+    /**
+     * お気に入り削除
+     */
+    public suspend fun deleteBookmark(id: Int) {
+        learningHistoryData.deleteBookmarkWord(id)
         writeHistory()
     }
 
