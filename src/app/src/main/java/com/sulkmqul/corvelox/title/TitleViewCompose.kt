@@ -38,7 +38,7 @@ public fun TitleViewCompose(modifier: Modifier) {
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
             Image(
-                painterResource(R.drawable.logo),
+                painterResource(R.drawable.logo2),
                 contentDescription = "",
                 modifier = Modifier.fillMaxSize(0.99f)
             )

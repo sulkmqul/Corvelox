@@ -7,8 +7,11 @@ import androidx.activity.enableEdgeToEdge
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
+import androidx.compose.material3.SnackbarHost
+import androidx.compose.material3.SnackbarHostState
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.repeatOnLifecycle
@@ -49,13 +52,7 @@ class MainActivity : ComponentActivity() {
 
         setContent {
             CorveloxTheme {
-
-
-
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-
-                    MainScreen(Modifier.padding(innerPadding))
-                }
+                MainScreen(Modifier.fillMaxSize())
             }
         }
     }
@@ -82,7 +79,7 @@ class MainActivity : ComponentActivity() {
     }
 
     /**
-     * 遷移要求を処理し、現在の画面を表示する。
+     * 遷移要求を処理し、現在の画面と共通の Snackbar 表示領域を構成する。
      *
      * @param modifier 画面全体に適用するレイアウト指定。
      * @return Unit。
@@ -91,7 +88,15 @@ class MainActivity : ComponentActivity() {
     private fun MainScreen(modifier: Modifier) {
 
         val navCon = rememberNavController()
+        val snackbarHostState = remember { SnackbarHostState() }
 
+        LaunchedEffect(Unit) {
+            corveloxEventService.snackbarEvent.collect { ev ->
+                snackbarHostState.showSnackbar(ev.text, duration = ev.duration)
+            }
+        }
+
+        
         LaunchedEffect(navCon) {
             lifecycle.repeatOnLifecycle(Lifecycle.State.RESUMED) {
                 corveloxEventService.navigationEvents.collect { event ->
@@ -112,32 +117,37 @@ class MainActivity : ComponentActivity() {
             }
         }
 
-        NavHost(
-            navController = navCon,
-            startDestination = CorveloxViewId.Title.name,
-            modifier = modifier
-        ) {
-            composable(CorveloxViewId.Title.name) {
-                TitleViewCompose(Modifier)
-            }
-            composable(CorveloxViewId.LevelMenu.name) {
+        Scaffold(
+            modifier = modifier,
+            snackbarHost = { SnackbarHost(hostState = snackbarHostState) }
+        ) { innerPadding ->
+            NavHost(
+                navController = navCon,
+                startDestination = CorveloxViewId.Title.name,
+                modifier = Modifier.padding(innerPadding)
+            ) {
+                composable(CorveloxViewId.Title.name) {
+                    TitleViewCompose(Modifier)
+                }
+                composable(CorveloxViewId.LevelMenu.name) {
 
-                LevelSelectCompose(Modifier)
-            }
-            composable("${CorveloxViewId.ShelfMenu.name}/{level}",
-                arguments = listOf(
-                    navArgument("level") {
-                        type = NavType.StringType
-                    })
-                ) { param ->
+                    LevelSelectCompose(Modifier)
+                }
+                composable("${CorveloxViewId.ShelfMenu.name}/{level}",
+                    arguments = listOf(
+                        navArgument("level") {
+                            type = NavType.StringType
+                        })
+                    ) { param ->
 
-                val st = param.arguments?.getString("level")?.let(WordShelfType::valueOf)
-                ShelfMenuView(Modifier, st)
-            }
-            composable(CorveloxViewId.WordLearning.name) {
-                LearningView(Modifier)
-            }
-            composable(CorveloxViewId.Result.name) {
+                    val st = param.arguments?.getString("level")?.let(WordShelfType::valueOf)
+                    ShelfMenuView(Modifier, st)
+                }
+                composable(CorveloxViewId.WordLearning.name) {
+                    LearningView(Modifier)
+                }
+                composable(CorveloxViewId.Result.name) {
+                }
             }
         }
     }

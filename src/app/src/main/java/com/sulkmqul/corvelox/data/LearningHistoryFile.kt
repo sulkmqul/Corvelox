@@ -50,6 +50,9 @@ public data class LearningHistoryData(
         return  bookmarkWordList.contains(id)
     }
 
+    public fun deleteBookmarkWord(id: Int) {
+        bookmarkWordList.remove(id)
+    }
 
 
     public fun clearShelfHistory() {

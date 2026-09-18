@@ -1,5 +1,6 @@
 package com.sulkmqul.corvelox
 
+import androidx.compose.material3.SnackbarDuration
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.asSharedFlow
 import javax.inject.Inject
@@ -54,6 +55,19 @@ public sealed interface NavigationEvent {
     public data object Back : NavigationEvent
 }
 
+
+/**
+ * SnackBarの要求
+ */
+public data class SnackBarRequest(
+    public val text: String,
+    public val actionLabel: String? = null,
+    public val action: () -> Unit = {},
+    public val dismiss: ()-> Unit = {},
+    public val duration: SnackbarDuration = SnackbarDuration.Short,
+)
+
+
 /**
  * 画面遷移の要求を通知するサービス。現在画面や戻る履歴は保持しない。
  */
@@ -68,6 +82,10 @@ public class CorveloxEventService @Inject constructor() {
 
     /** MainScreen で収集する遷移要求。処理済みの要求は再配信しない。 */
     public val navigationEvents = navigationEventFlow.asSharedFlow()
+
+    private val snackbarEventFlow = MutableSharedFlow<SnackBarRequest>(replay = 1)
+    public val snackbarEvent = snackbarEventFlow.asSharedFlow()
+
 
     /**
      * 指定画面への遷移を要求する。
@@ -93,5 +111,12 @@ public class CorveloxEventService @Inject constructor() {
         check(navigationEventFlow.tryEmit(NavigationEvent.Back)) {
             "Navigation event buffer is full"
         }
+    }
+
+    /**
+     * Snackbar表示
+     */
+    public fun showSnackbar(text: String) {
+        snackbarEventFlow.tryEmit(SnackBarRequest(text))
     }
 }

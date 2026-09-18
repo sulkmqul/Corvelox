@@ -30,12 +30,21 @@ public class LearningViewModel @Inject constructor(
     public val uiState = state.asStateFlow()
     private var completionDelivered = false
 
+    private val bookmarkEnabledStateFlow:MutableStateFlow<Boolean> = MutableStateFlow(false)
+    public val bookmarkEnabledState = bookmarkEnabledStateFlow.asStateFlow()
+
+    init {
+        bookmarkEnabledStateFlow.value = checkBookmark(state.value.currentWord?.id)
+    }
+
+
     /**
      * 表示を一段階進めます。
      * @return Unit。
      */
     public fun onTap() {
         state.update { it.advance() }
+        bookmarkEnabledStateFlow.value = checkBookmark(state.value.currentWord?.id)
     }
 
     /**
@@ -44,6 +53,7 @@ public class LearningViewModel @Inject constructor(
      */
     public fun onExampleTap() {
         state.update { it.revealExampleTranslation() }
+        bookmarkEnabledStateFlow.value = checkBookmark(state.value.currentWord?.id)
     }
 
     /**
@@ -51,7 +61,8 @@ public class LearningViewModel @Inject constructor(
      * @return Unit。
      */
     public fun previousWord() {
-        state.update { it.previousWord() }
+        state.update { it.previousWord()  }
+        bookmarkEnabledStateFlow.value = checkBookmark(state.value.currentWord?.id)
     }
 
     /**
@@ -60,6 +71,7 @@ public class LearningViewModel @Inject constructor(
      */
     public fun nextWord() {
         state.update { it.nextWord() }
+        bookmarkEnabledStateFlow.value = checkBookmark(state.value.currentWord?.id)
     }
 
     /**
@@ -85,7 +97,15 @@ public class LearningViewModel @Inject constructor(
      */
     public fun addBookmark(id: Int) {
         viewModelScope.launch {
-            historyService.addBookmark(id)
+            if(historyService.checkBookmarkWordExists(id) == false) {
+                historyService.addBookmark(id)
+                eventService.showSnackbar("保存しました")
+            }
+            else {
+                historyService.deleteBookmark(id)
+                eventService.showSnackbar("削除しました")
+            }
+            bookmarkEnabledStateFlow.value = checkBookmark(id)
         }
     }
 
