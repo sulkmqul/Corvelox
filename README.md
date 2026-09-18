@@ -19,7 +19,7 @@ Android向けの単語暗記アプリケーション。
     - Hilt：2.57.1
     - Hilt Navigation Compose：1.2.0
 
-- Visual Studio Code    
+- Visual Studio Code 1.137.0  
     - Codex – OpenAI’s coding agent 26.908.40401
 
 - OpenAI Codex
