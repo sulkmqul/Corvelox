@@ -2,8 +2,10 @@ package com.sulkmqul.corvelox.learning
 
 import android.speech.tts.TextToSpeech
 import android.util.Log
+import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.combinedClickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -101,8 +103,9 @@ public fun LearningView(modifier: Modifier = Modifier) {
         onBack = vm::returnShelfList,
         onPreviousWord = vm::previousWord,
         onNextWord = vm::nextWord,
-        onSaveWord = {vm.addBookmark(it)},
-        onVoice = { tts?.speak(it, TextToSpeech.QUEUE_FLUSH, null, "word")},
+        onSaveWord = { vm.addBookmark(it) },
+        onVoice = { tts?.speak(it, TextToSpeech.QUEUE_FLUSH, null, "word") },
+        onSearch = { vm.searchWord(context, it) },
         modifier = modifier,
     )
 }
@@ -129,6 +132,7 @@ internal fun LearningScreen(
     onNextWord: () -> Unit,
     onSaveWord: (id: Int) -> Unit,
     onVoice: (text: String) -> Unit,
+    onSearch: (word: Word) -> Unit,
     modifier: Modifier = Modifier,
 ) {
 
@@ -141,7 +145,13 @@ internal fun LearningScreen(
             .padding(20.dp),
         horizontalAlignment = Alignment.CenterHorizontally,
     ) {
-        LearningControls(saveFlag, onBack, onPreviousWord, { state.currentWord?.id?.let{ onSaveWord(it) } }, onNextWord)
+        LearningControls(
+            saveFlag,
+            onBack,
+            onPreviousWord,
+            { state.currentWord?.id?.let { onSaveWord(it) } },
+            onNextWord
+        )
         // 操作ボタンと周辺の余白は、意味を開示するタップ領域から外します。
         Column(
             Modifier
@@ -150,7 +160,10 @@ internal fun LearningScreen(
                 .clickable(enabled = !state.isFinished, onClickLabel = "次を表示", onClick = onTap),
             horizontalAlignment = Alignment.CenterHorizontally,
         ) {
-            Text("${state.currentPosition}/${state.totalWords}", style = MaterialTheme.typography.labelLarge)
+            Text(
+                "${state.currentPosition}/${state.totalWords}",
+                style = MaterialTheme.typography.labelLarge
+            )
             Spacer(Modifier.height(20.dp))
             val word = state.currentWord
             when {
@@ -158,18 +171,25 @@ internal fun LearningScreen(
                 word == null -> Text("練習する単語がありません。タップして終了します。")
                 else -> key(state.wordIndex) {
                     // 単語が変わると各領域のスクロール位置も初期化します。
-                    Column(Modifier.weight(1f), horizontalAlignment = Alignment.CenterHorizontally) {
-                        LearningWordHeader(word, onVoice, Modifier
-                            .fillMaxWidth()
-                            .weight(1f))
+                    Column(
+                        Modifier.weight(1f),
+                        horizontalAlignment = Alignment.CenterHorizontally
+                    ) {
+                        //単語表示
+                        LearningWordHeader(
+                            word, onVoice, onSearch, Modifier
+                                .fillMaxWidth()
+                                .weight(1f)
+                        )
                         Spacer(Modifier.height(12.dp))
-                        // 内容に合わせて縮み、長文の場合だけ割り当て上限内でスクロールします。
+                        // 意味
                         LearningMeaningList(
                             word.meanings,
                             state.revealedMeaningCount,
                             Modifier.weight(1.0f),
                         )
                         Spacer(Modifier.height(32.dp))
+                        // 例文
                         LearningExampleSectionEx(
                             word = word,
                             visible = state.isExampleVisible,
@@ -222,10 +242,17 @@ private fun LearningControls(
  * 単語を大きな太字で表示し、IPAによる発音記号を添えます。
  * @param word 表示対象の単語。
  * @param modifier 領域の装飾と配置。
+ * @param onVoice 音声再生
+ * @param onSearch 単語検索時
  * @return Unit。
  */
+@OptIn(ExperimentalFoundationApi::class)
 @Composable
-private fun LearningWordHeader(word: Word, onVoice: (text: String) -> Unit, modifier: Modifier = Modifier) {
+private fun LearningWordHeader(word: Word, onVoice: (text: String) -> Unit, onSearch: (word: Word) -> Unit, modifier: Modifier = Modifier) {
+
+    val mod = Modifier.combinedClickable(
+        onClick = { onVoice(word.word) },
+        onDoubleClick = { onSearch(word) })
     Column(
         modifier
             .verticalScroll(rememberScrollState())
@@ -238,7 +265,7 @@ private fun LearningWordHeader(word: Word, onVoice: (text: String) -> Unit, modi
             style = MaterialTheme.typography.displayLarge,
             fontWeight = FontWeight.Bold,
             textAlign = TextAlign.Center,
-            modifier = Modifier.clickable(onClick = { onVoice(word.word) })
+            modifier = mod
         )
         if (word.ipa.isNotBlank()) Text(word.ipa, textAlign = TextAlign.Center)
     }

@@ -1,15 +1,23 @@
 package com.sulkmqul.corvelox.learning
 
+import android.content.Context
+import android.content.Intent
+import android.net.Uri
+import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.sulkmqul.corvelox.CorveloxEventService
+import com.sulkmqul.corvelox.R
 import com.sulkmqul.corvelox.data.LearningHistoryService
 import com.sulkmqul.corvelox.data.QuestionService
+import com.sulkmqul.corvelox.data.Word
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.launch
+import java.net.URLEncoder
+import java.nio.charset.StandardCharsets
 import javax.inject.Inject
 
 /**
@@ -117,5 +125,29 @@ public class LearningViewModel @Inject constructor(
             return false
         }
         return historyService.checkBookmarkWordExists(id)
+    }
+
+
+    /**
+     * 対象語句を検索する
+     */
+    public fun searchWord(context: Context, word: Word) {
+
+        val keyword = URLEncoder.encode(
+            "${word.word}",
+            StandardCharsets.UTF_8.toString()
+        )
+
+        //検索ワードの作成
+        val uri = "${context.getString(R.string.search_base, keyword)}"
+
+        // 検索起動
+        val intent = Intent(
+            Intent.ACTION_VIEW,
+            Uri.parse(uri)
+        )
+        context.startActivity(intent)
+
+
     }
 }
