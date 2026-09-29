@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">Corvelox</string>
+    <string name="search_base">"https://www.google.com/search?q=%1$s 英語 意味</string>
     <string name="history_file_name">history.json</string>
 
     <string name="word_list_name">wordlist.json</string>

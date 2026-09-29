@@ -25,7 +25,8 @@ Android向けの単語暗記アプリケーション。
 - OpenAI Codex
 
 ## Android動作条件
-- Android 16（APIレベル36）以上
+- Android 13（APIレベル33）以上
+
 
 ## 出力ファイル
 - 学習履歴：アプリ内部ストレージ `files/history.json`
