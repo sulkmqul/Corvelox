@@ -9,6 +9,7 @@ import androidx.compose.foundation.combinedClickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -16,8 +17,12 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.verticalScroll
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.VolumeUp
+import androidx.compose.material.icons.filled.VolumeUp
 import androidx.compose.material3.ButtonColors
 import androidx.compose.material3.ButtonDefaults
+import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -195,6 +200,7 @@ internal fun LearningScreen(
                             visible = state.isExampleVisible,
                             translationVisible = state.isExampleTranslationVisible,
                             onTap = onExampleTap,
+                            onVoice = onVoice,
                             modifier = Modifier.weight(1.5f),
                         )
                         Spacer(Modifier.height(24.dp))
@@ -358,6 +364,7 @@ private fun LearningExampleSectionEx(
     visible: Boolean,
     translationVisible: Boolean,
     onTap: () -> Unit,
+    onVoice: (text: String) -> Unit,
     modifier: Modifier = Modifier,
 ) {
     Box(modifier.fillMaxWidth()) {
@@ -372,7 +379,14 @@ private fun LearningExampleSectionEx(
                     .padding(12.dp),
                 verticalArrangement = Arrangement.spacedBy(12.dp),
             ) {
-                Text("例文", style = MaterialTheme.typography.titleMedium)
+                Box(Modifier.fillMaxWidth()){
+                    Text("例文", style = MaterialTheme.typography.titleMedium, modifier = Modifier.align(Alignment.TopStart))
+                    Icon(imageVector = Icons.AutoMirrored.Filled.VolumeUp,
+                        contentDescription = "",
+                        modifier = Modifier.align(Alignment.TopEnd).clickable(
+                            onClick = {onVoice(word.example_en)}
+                        ))
+                }
                 val exampleText = remember(word.example_en, word.word) {
                     underlineExampleWord(word.example_en, word.word)
                 }
