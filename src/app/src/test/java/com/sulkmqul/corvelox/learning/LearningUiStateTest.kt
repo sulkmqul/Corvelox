@@ -2,11 +2,11 @@ package com.sulkmqul.corvelox.learning
 
 import com.sulkmqul.corvelox.CorveloxEventService
 import com.sulkmqul.corvelox.NavigationEvent
-import com.sulkmqul.corvelox.data.PartOfSpeech
-import com.sulkmqul.corvelox.data.QuestionService
-import com.sulkmqul.corvelox.data.Word
-import com.sulkmqul.corvelox.data.WordBookService
-import com.sulkmqul.corvelox.data.WordMeaning
+import com.sulkmqul.corvelox.data.word.PartOfSpeech
+import com.sulkmqul.corvelox.data.word.QuestionService
+import com.sulkmqul.corvelox.data.word.Word
+import com.sulkmqul.corvelox.data.word.WordBookService
+import com.sulkmqul.corvelox.data.word.WordMeaning
 import org.junit.Assert.assertEquals
 import org.junit.Assert.assertFalse
 import org.junit.Assert.assertSame

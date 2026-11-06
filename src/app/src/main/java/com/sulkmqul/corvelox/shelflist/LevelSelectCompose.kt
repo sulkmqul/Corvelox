@@ -1,6 +1,7 @@
 package com.sulkmqul.corvelox.shelflist
 
 import android.content.res.AssetManager
+import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -9,9 +10,13 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
@@ -21,9 +26,9 @@ import com.sulkmqul.corvelox.CorveloxViewId
 import com.sulkmqul.corvelox.compose.CvxButton
 import com.sulkmqul.corvelox.compose.CvxTextH1
 import com.sulkmqul.corvelox.compose.CvxTextH2
-import com.sulkmqul.corvelox.data.LearningHistoryService
-import com.sulkmqul.corvelox.data.QuestionService
-import com.sulkmqul.corvelox.data.WordShelfType
+import com.sulkmqul.corvelox.data.word.LearningHistoryService
+import com.sulkmqul.corvelox.data.word.QuestionService
+import com.sulkmqul.corvelox.data.word.WordShelfType
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.runBlocking
 import javax.inject.Inject
@@ -38,30 +43,56 @@ public fun LevelSelectCompose(modifier: Modifier) {
 
     val am = LocalContext.current.assets
 
-    Column(modifier.fillMaxSize().padding(10.dp), horizontalAlignment = Alignment.CenterHorizontally, verticalArrangement = Arrangement.spacedBy(10.dp)) {
+    Column(modifier.fillMaxSize().padding(10.dp).verticalScroll(rememberScrollState()), horizontalAlignment = Alignment.CenterHorizontally, verticalArrangement = Arrangement.spacedBy(20.dp)) {
         CvxTextH1("カテゴリ選択")
-
-        Spacer(Modifier.fillMaxWidth().height(20.dp))
-
-        CvxButton(Modifier, {vm.navigateShelfView(WordShelfType.Level1)}) {
-            CvxTextH2("Level 1")
-        }
-        CvxButton(Modifier, {vm.navigateShelfView(WordShelfType.Level2)}) {
-            CvxTextH2("Level 2")
-        }
-        CvxButton(Modifier, {vm.navigateShelfView(WordShelfType.Level3)}) {
-            CvxTextH2("Level 3")
-        }
         Spacer(Modifier.fillMaxWidth().height(10.dp))
 
-        CvxButton(Modifier, {vm.navigateShelfView(WordShelfType.All)}) {
-            CvxTextH2("ALL")
+
+        //単語
+        Column(Modifier.fillMaxWidth(0.7f).border(1.dp, color = Color.Gray , RoundedCornerShape(15.dp)).padding(20.dp, 0.dp, 20.dp, 20.dp), horizontalAlignment = Alignment.CenterHorizontally, verticalArrangement = Arrangement.spacedBy(10.dp)) {
+            CvxTextH2("単語")
+            Spacer(Modifier.fillMaxWidth().height(10.dp))
+
+            CvxButton(Modifier, { vm.navigateShelfView(WordShelfType.Level1) }) {
+                CvxTextH2("Level 1")
+            }
+            CvxButton(Modifier, { vm.navigateShelfView(WordShelfType.Level2) }) {
+                CvxTextH2("Level 2")
+            }
+            CvxButton(Modifier, { vm.navigateShelfView(WordShelfType.Level3) }) {
+                CvxTextH2("Level 3")
+            }
+            Spacer(Modifier.fillMaxWidth().height(10.dp))
+
+            CvxButton(Modifier, { vm.navigateShelfView(WordShelfType.All) }) {
+                CvxTextH2("ALL")
+            }
+
+            Spacer(Modifier.fillMaxWidth().height(10.dp))
+
+            CvxButton(Modifier, { vm.navigateBookmarkQuestion(am) }, vm.checkEnableBookmark()) {
+                CvxTextH2("Bookmark")
+            }
         }
 
-        Spacer(Modifier.fillMaxWidth().height(10.dp))
+        //文章
+        Column(Modifier.fillMaxWidth(0.7f).border(1.dp, color = Color.Gray , RoundedCornerShape(15.dp)).padding(20.dp, 0.dp, 20.dp, 20.dp), horizontalAlignment = Alignment.CenterHorizontally, verticalArrangement = Arrangement.spacedBy(10.dp)) {
+            CvxTextH2("文章")
+            Spacer(Modifier.fillMaxWidth().height(10.dp))
 
-        CvxButton(Modifier, {vm.navigateBookmarkQuestion(am)}, vm.checkEnableBookmark()) {
-            CvxTextH2("Bookmark")
+            CvxButton(Modifier, { vm.navigateShelfView(WordShelfType.Level1) }) {
+                CvxTextH2("Level 1")
+            }
+            CvxButton(Modifier, { vm.navigateShelfView(WordShelfType.Level1) }) {
+                CvxTextH2("Level 2")
+            }
+            CvxButton(Modifier, { vm.navigateShelfView(WordShelfType.Level1) }) {
+                CvxTextH2("Level 3")
+            }
+
+            CvxButton(Modifier, { vm.navigateShelfView(WordShelfType.Level1) }) {
+                CvxTextH2("RANDOM")
+            }
         }
 
         Box(Modifier.fillMaxSize()) {

@@ -3,14 +3,13 @@ package com.sulkmqul.corvelox.learning
 import android.content.Context
 import android.content.Intent
 import android.net.Uri
-import android.util.Log
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.sulkmqul.corvelox.CorveloxEventService
 import com.sulkmqul.corvelox.R
-import com.sulkmqul.corvelox.data.LearningHistoryService
-import com.sulkmqul.corvelox.data.QuestionService
-import com.sulkmqul.corvelox.data.Word
+import com.sulkmqul.corvelox.data.word.LearningHistoryService
+import com.sulkmqul.corvelox.data.word.QuestionService
+import com.sulkmqul.corvelox.data.word.Word
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow

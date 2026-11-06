@@ -3,8 +3,6 @@ package com.sulkmqul.corvelox.shelflist
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.FlowRow
-import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
@@ -23,14 +21,12 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.unit.sp
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.sulkmqul.corvelox.compose.CvxTextButton
-import com.sulkmqul.corvelox.compose.CvxTextH1
 import com.sulkmqul.corvelox.compose.CvxTextH2
 import com.sulkmqul.corvelox.compose.CvxTextN
-import com.sulkmqul.corvelox.data.WordShelfData
-import com.sulkmqul.corvelox.data.WordShelfType
+import com.sulkmqul.corvelox.data.word.WordShelfData
+import com.sulkmqul.corvelox.data.word.WordShelfType
 
 
 /**

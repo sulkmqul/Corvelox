@@ -1,9 +1,8 @@
-package com.sulkmqul.corvelox.data
+package com.sulkmqul.corvelox.data.word
 
 import android.content.res.AssetManager
 import android.util.JsonReader
 import android.util.JsonToken
-import android.util.Log
 import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext

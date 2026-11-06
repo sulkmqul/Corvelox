@@ -1,6 +1,6 @@
 package com.sulkmqul.corvelox.learning
 
-import com.sulkmqul.corvelox.data.Word
+import com.sulkmqul.corvelox.data.word.Word
 
 /**
  * 練習画面の表示状態と単語の開示段階を保持します。

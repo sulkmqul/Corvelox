@@ -1,11 +1,10 @@
 package com.sulkmqul.corvelox.title
 
-import android.util.Printer
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.sulkmqul.corvelox.CorveloxEventService
 import com.sulkmqul.corvelox.CorveloxViewId
-import com.sulkmqul.corvelox.data.LearningHistoryService
+import com.sulkmqul.corvelox.data.word.LearningHistoryService
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
 import javax.inject.Inject

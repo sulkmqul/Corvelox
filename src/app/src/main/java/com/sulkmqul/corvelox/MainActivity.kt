@@ -20,9 +20,9 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
-import com.sulkmqul.corvelox.data.LearningHistoryService
-import com.sulkmqul.corvelox.data.WordBookService
-import com.sulkmqul.corvelox.data.WordShelfType
+import com.sulkmqul.corvelox.data.word.LearningHistoryService
+import com.sulkmqul.corvelox.data.word.WordBookService
+import com.sulkmqul.corvelox.data.word.WordShelfType
 import com.sulkmqul.corvelox.learning.LearningView
 import com.sulkmqul.corvelox.shelflist.LevelSelectCompose
 import com.sulkmqul.corvelox.shelflist.ShelfMenuView

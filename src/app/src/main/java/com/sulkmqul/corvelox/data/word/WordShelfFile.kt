@@ -1,5 +1,4 @@
-
-package com.sulkmqul.corvelox.data
+package com.sulkmqul.corvelox.data.word
 
 import android.content.res.AssetManager
 import android.util.JsonReader

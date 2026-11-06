@@ -4,11 +4,11 @@ import android.content.res.AssetManager
 import androidx.lifecycle.ViewModel
 import com.sulkmqul.corvelox.CorveloxEventService
 import com.sulkmqul.corvelox.CorveloxViewId
-import com.sulkmqul.corvelox.data.LearningHistoryService
-import com.sulkmqul.corvelox.data.QuestionService
-import com.sulkmqul.corvelox.data.WordBookService
-import com.sulkmqul.corvelox.data.WordShelfData
-import com.sulkmqul.corvelox.data.WordShelfType
+import com.sulkmqul.corvelox.data.word.LearningHistoryService
+import com.sulkmqul.corvelox.data.word.QuestionService
+import com.sulkmqul.corvelox.data.word.WordBookService
+import com.sulkmqul.corvelox.data.word.WordShelfData
+import com.sulkmqul.corvelox.data.word.WordShelfType
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.asStateFlow

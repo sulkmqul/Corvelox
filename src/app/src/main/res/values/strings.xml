@@ -3,10 +3,10 @@
     <string name="search_base">"https://www.google.com/search?q=%1$s 英語 意味</string>
     <string name="history_file_name">history.json</string>
 
-    <string name="word_list_name">wordlist.json</string>
-    <string name="word_shelf_all">all.json</string>
-    <string name="word_shelf_level1">lv1.json</string>
-    <string name="word_shelf_level2">lv2.json</string>
-    <string name="word_shelf_level3">lv3.json</string>
+    <string name="word_list_name">word/wordlist.json</string>
+    <string name="word_shelf_all">word/all.json</string>
+    <string name="word_shelf_level1">word/lv1.json</string>
+    <string name="word_shelf_level2">word/lv2.json</string>
+    <string name="word_shelf_level3">word/lv3.json</string>
 
 </resources>

@@ -1,4 +1,4 @@
-package com.sulkmqul.corvelox.data
+package com.sulkmqul.corvelox.data.word
 
 import android.content.Context
 import com.sulkmqul.corvelox.R
