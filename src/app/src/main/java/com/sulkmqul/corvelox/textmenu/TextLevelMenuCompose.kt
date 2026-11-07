@@ -89,6 +89,15 @@ private fun TextDataList(modifier: Modifier, title: String, textList: List<TextD
 }
 
 
+/**
+ * 1始まりの文章番号と概要を表示する選択ボタンを配置します。
+ * @param index 一覧内の0始まりの位置。表示時だけ1を加えます。
+ * @param text 文章の概要。
+ * @param modifier ボタンの配置と装飾。
+ * @param hilight ボタンを強調表示するか。
+ * @param onClick 文章を選択する処理。
+ * @return Unit。
+ */
 @Composable
 private fun TextListButton(index: Int, text: String, modifier: Modifier, hilight: Boolean = false,  onClick: () -> Unit){
 
@@ -98,7 +107,7 @@ private fun TextListButton(index: Int, text: String, modifier: Modifier, hilight
     }
 
     Button(onClick, modifier, shape = RoundedCornerShape(16.dp), colors = buttonCol) {
-        CvxTextS(index.toString())
+        CvxTextS((index + 1).toString())
         CvxTextS(text)
     }
 }

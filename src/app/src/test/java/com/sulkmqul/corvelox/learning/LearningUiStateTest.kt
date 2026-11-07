@@ -2,6 +2,7 @@ package com.sulkmqul.corvelox.learning
 
 import com.sulkmqul.corvelox.CorveloxEventService
 import com.sulkmqul.corvelox.NavigationEvent
+import com.sulkmqul.corvelox.data.word.LearningHistoryService
 import com.sulkmqul.corvelox.data.word.PartOfSpeech
 import com.sulkmqul.corvelox.data.word.QuestionService
 import com.sulkmqul.corvelox.data.word.Word
@@ -118,7 +119,15 @@ class LearningUiStateTest {
      */
     @Test
     fun completionIsConsumedOnce() {
-        val vm = LearningViewModel(QuestionService(WordBookService()), CorveloxEventService())
+        val historyService = LearningHistoryService()
+        val vm = LearningViewModel(
+            questionService = QuestionService(
+                bookService = WordBookService(historyService = historyService),
+                historyService = historyService,
+            ),
+            eventService = CorveloxEventService(),
+            historyService = historyService,
+        )
         assertFalse(vm.consumeCompletion())
         vm.previousWord()
         vm.onTap()
@@ -206,7 +215,15 @@ class LearningUiStateTest {
     @Test
     fun backRequestsPreviousScreen() = runBlocking {
         val events = CorveloxEventService()
-        val vm = LearningViewModel(QuestionService(WordBookService()), events)
+        val historyService = LearningHistoryService()
+        val vm = LearningViewModel(
+            questionService = QuestionService(
+                bookService = WordBookService(historyService = historyService),
+                historyService = historyService,
+            ),
+            eventService = events,
+            historyService = historyService,
+        )
         val initial = vm.uiState.value
         val event = async(start = CoroutineStart.UNDISPATCHED) { events.navigationEvents.first() }
         vm.returnShelfList()
