@@ -12,6 +12,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
@@ -43,9 +44,16 @@ fun CvxTextH2(text: String, modifier: Modifier = Modifier) {
 
 @Composable
 fun CvxTextN(text: String, modifier: Modifier = Modifier) {
-    Text(text, style = MaterialTheme.typography.bodyLarge)
+    Text(text, style = MaterialTheme.typography.bodyLarge, modifier = modifier)
 }
 
+
+
+
+@Composable
+fun CvxTextS(text: String, modifier: Modifier = Modifier) {
+    Text(text, style = MaterialTheme.typography.bodyMedium, modifier = modifier)
+}
 
 //@Composable
 //fun CvxTextButton(tid: Int, modifier: Modifier, onClick: () -> Unit){

@@ -20,12 +20,17 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
+import com.sulkmqul.corvelox.data.text.TextLerningLevel
+import com.sulkmqul.corvelox.data.text.TextDataService
 import com.sulkmqul.corvelox.data.word.LearningHistoryService
 import com.sulkmqul.corvelox.data.word.WordBookService
 import com.sulkmqul.corvelox.data.word.WordShelfType
 import com.sulkmqul.corvelox.learning.LearningView
 import com.sulkmqul.corvelox.shelflist.LevelSelectCompose
 import com.sulkmqul.corvelox.shelflist.ShelfMenuView
+import com.sulkmqul.corvelox.textmenu.TextLevelMenuCompose
+import com.sulkmqul.corvelox.textmenu.TextMenuCompose
+import com.sulkmqul.corvelox.textlerning.TextLearningView
 import com.sulkmqul.corvelox.title.TitleViewCompose
 import com.sulkmqul.corvelox.ui.theme.CorveloxTheme
 import dagger.hilt.android.AndroidEntryPoint
@@ -40,6 +45,9 @@ class MainActivity : ComponentActivity() {
     lateinit var corveloxEventService: CorveloxEventService
     @Inject
     lateinit var wordService: WordBookService
+
+    @Inject
+    lateinit var textDataService: TextDataService
 
     @Inject
     lateinit var historyService: LearningHistoryService
@@ -63,7 +71,9 @@ class MainActivity : ComponentActivity() {
      */
     private fun initialize() {
 
-        wordService.initialize(WordBookService.SrcType.Assets,
+        //単語
+        wordService.initialize(
+            WordBookService.SrcType.Assets,
             getString(R.string.word_list_name),
             getString(R.string.word_shelf_all),
             getString(R.string.word_shelf_level1),
@@ -71,6 +81,14 @@ class MainActivity : ComponentActivity() {
             getString(R.string.word_shelf_level3),
 
             )
+
+        //長文
+        textDataService.initialize(
+            TextDataService.SrcType.Assets,
+            getString(R.string.text_level1),
+            getString(R.string.text_level2),
+            getString(R.string.text_level3),
+        )
 
         val context = this
         runBlocking {
@@ -146,7 +164,21 @@ class MainActivity : ComponentActivity() {
                 composable(CorveloxViewId.WordLearning.name) {
                     LearningView(Modifier)
                 }
-                composable(CorveloxViewId.Result.name) {
+                composable(CorveloxViewId.TextMenu.name) {
+                    TextMenuCompose(Modifier)
+                }
+                composable("${CorveloxViewId.TextLevelMenu.name}/{level}",
+                    arguments = listOf(
+                        navArgument("level") {
+                            type = NavType.StringType
+                        })
+                ) { param ->
+
+                    val st = param.arguments?.getString("level")?.let(TextLerningLevel::valueOf)
+                    TextLevelMenuCompose(Modifier, st)
+                }
+                composable(CorveloxViewId.TextLerning.name) {
+                    TextLearningView(Modifier)
                 }
             }
         }

@@ -44,59 +44,35 @@ public fun LevelSelectCompose(modifier: Modifier) {
     val am = LocalContext.current.assets
 
     Column(modifier.fillMaxSize().padding(10.dp).verticalScroll(rememberScrollState()), horizontalAlignment = Alignment.CenterHorizontally, verticalArrangement = Arrangement.spacedBy(20.dp)) {
-        CvxTextH1("カテゴリ選択")
+        CvxTextH1("単語カテゴリ選択")
         Spacer(Modifier.fillMaxWidth().height(10.dp))
 
 
-        //単語
-        Column(Modifier.fillMaxWidth(0.7f).border(1.dp, color = Color.Gray , RoundedCornerShape(15.dp)).padding(20.dp, 0.dp, 20.dp, 20.dp), horizontalAlignment = Alignment.CenterHorizontally, verticalArrangement = Arrangement.spacedBy(10.dp)) {
-            CvxTextH2("単語")
-            Spacer(Modifier.fillMaxWidth().height(10.dp))
 
-            CvxButton(Modifier, { vm.navigateShelfView(WordShelfType.Level1) }) {
-                CvxTextH2("Level 1")
-            }
-            CvxButton(Modifier, { vm.navigateShelfView(WordShelfType.Level2) }) {
-                CvxTextH2("Level 2")
-            }
-            CvxButton(Modifier, { vm.navigateShelfView(WordShelfType.Level3) }) {
-                CvxTextH2("Level 3")
-            }
-            Spacer(Modifier.fillMaxWidth().height(10.dp))
+        CvxButton(Modifier, { vm.navigateShelfView(WordShelfType.Level1) }) {
+            CvxTextH2("Level 1")
+        }
+        CvxButton(Modifier, { vm.navigateShelfView(WordShelfType.Level2) }) {
+            CvxTextH2("Level 2")
+        }
+        CvxButton(Modifier, { vm.navigateShelfView(WordShelfType.Level3) }) {
+            CvxTextH2("Level 3")
+        }
+        Spacer(Modifier.fillMaxWidth().height(10.dp))
 
-            CvxButton(Modifier, { vm.navigateShelfView(WordShelfType.All) }) {
-                CvxTextH2("ALL")
-            }
-
-            Spacer(Modifier.fillMaxWidth().height(10.dp))
-
-            CvxButton(Modifier, { vm.navigateBookmarkQuestion(am) }, vm.checkEnableBookmark()) {
-                CvxTextH2("Bookmark")
-            }
+        CvxButton(Modifier, { vm.navigateShelfView(WordShelfType.All) }) {
+            CvxTextH2("ALL")
         }
 
-        //文章
-        Column(Modifier.fillMaxWidth(0.7f).border(1.dp, color = Color.Gray , RoundedCornerShape(15.dp)).padding(20.dp, 0.dp, 20.dp, 20.dp), horizontalAlignment = Alignment.CenterHorizontally, verticalArrangement = Arrangement.spacedBy(10.dp)) {
-            CvxTextH2("文章")
-            Spacer(Modifier.fillMaxWidth().height(10.dp))
+        Spacer(Modifier.fillMaxWidth().height(10.dp))
 
-            CvxButton(Modifier, { vm.navigateShelfView(WordShelfType.Level1) }) {
-                CvxTextH2("Level 1")
-            }
-            CvxButton(Modifier, { vm.navigateShelfView(WordShelfType.Level1) }) {
-                CvxTextH2("Level 2")
-            }
-            CvxButton(Modifier, { vm.navigateShelfView(WordShelfType.Level1) }) {
-                CvxTextH2("Level 3")
-            }
-
-            CvxButton(Modifier, { vm.navigateShelfView(WordShelfType.Level1) }) {
-                CvxTextH2("RANDOM")
-            }
+        CvxButton(Modifier, { vm.navigateBookmarkQuestion(am) }, vm.checkEnableBookmark()) {
+            CvxTextH2("Bookmark")
         }
+
 
         Box(Modifier.fillMaxSize()) {
-            CvxButton(Modifier.align(Alignment.BottomCenter), {vm.returnTop()}) {
+            CvxButton(Modifier.align(Alignment.BottomCenter), { vm.returnTop() }) {
                 CvxTextH2("戻る")
             }
         }

@@ -14,7 +14,11 @@ public enum class CorveloxViewId {
     LevelMenu,
     ShelfMenu,
     WordLearning,
-    Result,
+
+    TextMenu,
+    TextLevelMenu,
+    TextLerning,
+
 }
 
 /**

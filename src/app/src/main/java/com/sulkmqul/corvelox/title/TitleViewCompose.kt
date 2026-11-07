@@ -48,7 +48,8 @@ public fun TitleViewCompose(modifier: Modifier) {
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.spacedBy(10.dp)
         ) {
-            TitleMenuButton("Start", Modifier, { vm.navigate(CorveloxViewId.LevelMenu) })
+            TitleMenuButton("Word", Modifier, { vm.navigate(CorveloxViewId.LevelMenu) })
+            TitleMenuButton("Text", Modifier, { vm.navigate(CorveloxViewId.TextMenu) })
 
             Spacer(modifier.fillMaxWidth().height(20.dp))
 

@@ -9,4 +9,7 @@
     <string name="word_shelf_level2">word/lv2.json</string>
     <string name="word_shelf_level3">word/lv3.json</string>
 
+    <string name="text_level1">text/level_1.json</string>
+    <string name="text_level2">text/level_2.json</string>
+    <string name="text_level3">text/level_3.json</string>
 </resources>
