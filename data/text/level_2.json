@@ -794,5 +794,741 @@
       }
     ],
     "explanation": "“which part you mean” は間接疑問で、相手が具体的にどの箇所のことを言っているのかを尋ねています。"
+  },
+  {
+    "id": "309f900e-c1b1-4314-ad0b-d4a3c1373a06",
+    "difficulty": 2,
+    "outline": "旅先で覚えた料理の名前を使って注文し、店による違いに気づく。",
+    "paragraphs": [
+      {
+        "en": "On my first morning in the town, the owner of the guesthouse brought me a warm bowl of beans with an egg on top. I asked what it was called and wrote the name down on the back of my ticket.",
+        "jp": "町に来た最初の朝、宿の主人が、卵を載せた温かい豆料理を一杯持ってきてくれました。料理の名前を尋ね、切符の裏に書き留めました。"
+      },
+      {
+        "en": "Two days later, I ordered it in a café near the river. The waiter brought a flat piece of bread filled with beans, with no egg in sight. I wondered whether he had heard me wrong.",
+        "jp": "二日後、川の近くのカフェでその料理を注文しました。店員が持ってきたのは、豆を挟んだ平たいパンで、卵は見当たりませんでした。聞き間違えたのだろうかと思いました。"
+      },
+      {
+        "en": "A woman at the next table had ordered the same thing. When she saw me turning the bread over, she asked whether I was looking for something. I told her about the guesthouse and asked what people here usually called it.",
+        "jp": "隣のテーブルの女性も同じものを注文していました。私がパンを裏返すのを見て、何か探しているのか聞いてきました。宿でのことを話し、この辺りではその料理をふつう何と呼ぶのか尋ねました。"
+      },
+      {
+        "en": "She said her father had always used the name for beans he warmed up in the morning, no matter what he ate with them. At the café, the name had stayed on the menu even after the cook started putting the beans in bread.",
+        "jp": "女性の父親は、朝に温め直す豆を、何と一緒に食べてもその名前で呼んでいたそうです。カフェでも、料理人が豆をパンに挟むようになったあとも、その名前がメニューに残っていました。"
+      },
+      {
+        "en": "When I told the woman I had written the name on a ticket, she asked to see it. She added a mark to show which part of the word she said more loudly.",
+        "jp": "切符に名前を書いたと話すと、女性は見せてほしいと言いました。言葉のどの部分を強く発音するか、印を書き足してくれました。"
+      },
+      {
+        "en": "I ate my breakfast and wrote a second line on the back of the ticket. It was a question rather than a new name: how do you make it here? I used it at the next café, where the cook told me to wait and see.",
+        "jp": "朝食を食べ、切符の裏に二行目を書きました。新しい名前ではなく、「ここではどう作りますか」という質問です。次のカフェで使ってみると、料理人に、出てくるまでのお楽しみだと言われました。"
+      }
+    ],
+    "explanation": "“what people here usually called it” は間接疑問です。“it” は話題になっている料理を指します。"
+  },
+  {
+    "id": "3b9dd4f6-bc8d-42ca-a86e-32f714a846a3",
+    "difficulty": 2,
+    "outline": "駅で空いた車両に案内する試みが、乗客の降りる駅によって受け止められ方を変える。",
+    "paragraphs": [
+      {
+        "en": "For a week, staff at Birch Station stood beside the stairs and pointed passengers towards the far end of the platform. The last two carriages usually left the station with space to spare, while people near the stairs could barely get through the doors.",
+        "jp": "バーチ駅では一週間、駅員が階段のそばに立ち、乗客にホームの奥へ行くよう案内しました。階段のそばでは乗客がドアを通るのもやっとでしたが、最後尾の二両にはたいてい余裕がありました。"
+      },
+      {
+        "en": "Some passengers walked down the platform as soon as they were asked. Others looked along the train and stayed where they were. One woman said she had to be near the front when she got off, because the exit at her station was at that end.",
+        "jp": "声をかけられるとすぐホームの奥まで歩く人もいました。車両の並びを見渡して、その場にとどまる人もいました。ある女性は、降りる駅の出口が前方にあるので、降車時には先頭寄りにいる必要があると言いました。"
+      },
+      {
+        "en": "The station tried a new sign the following week. It showed the two busiest stops and indicated which end of the train to use for the main exit at each. People who did not need to be at the front could move away from the stairs without wondering whether they would have to walk back later.",
+        "jp": "翌週、駅は新しい掲示を試しました。利用の多い二つの停車駅を示し、それぞれの主な出口に近いのは列車のどちら側かを表示しました。先頭寄りにいる必要のない人は、あとで戻って歩くことになるか心配せず、階段から離れることができました。"
+      },
+      {
+        "en": "Staff also found that they needed to stand farther from the stairs. A person reading the sign there could stop without blocking the way for people coming up from the entrance.",
+        "jp": "駅員は、階段から少し離れたところに立つ必要もあると分かりました。そこで掲示を読む人は、入り口から上がってくる人の通り道をふさがずに立ち止まれます。"
+      },
+      {
+        "en": "The change made little difference on Monday, when the first train arrived early. On Wednesday, passengers had enough time to read the sign before the doors opened. The front of the train still filled first, but fewer people had to wait for another service.",
+        "jp": "最初の列車が早く来た月曜は、変更の効果はほとんどありませんでした。水曜は、ドアが開く前に乗客が掲示を読む時間が十分にありました。先頭のほうが先に埋まるのは同じでしたが、次の列車を待つ人は減りました。"
+      }
+    ],
+    "explanation": "“which end of the train to use” は「列車のどちら側を使うべきか」という意味です。"
+  },
+  {
+    "id": "11d7db66-c007-41fd-a86c-5c0986cfd465",
+    "difficulty": 2,
+    "outline": "改装した読書室について、静かさをどのように確かめたかを設計担当者に聞く。",
+    "paragraphs": [
+      {
+        "en": "Reporter: The smallest room in the new reading centre seems to be the most popular. Did you expect that when you saw the plan?",
+        "jp": "記者「新しい読書施設では、いちばん小さな部屋がいちばん人気のようです。図面を見た時点で予想していましたか？」"
+      },
+      {
+        "en": "Designer: No. On paper, I would have chosen the room with the widest windows. It had space for more tables and looked like the obvious place for people to read.",
+        "jp": "設計担当者「いいえ。図面で選ぶなら、いちばん窓が広い部屋にしたでしょう。机を多く置けて、読書にふさわしい場所に見えました」"
+      },
+      {
+        "en": "Reporter: What did you find when the rooms were ready? Designer: The large room faced a yard where carts were moved several times a day. The small room had a view of a brick wall, but you could sit there without hearing the wheels.",
+        "jp": "記者「部屋ができてみると、どうでしたか？」設計担当者「大きな部屋は、一日に何度も台車を動かす中庭に面していました。小さな部屋からはれんがの壁が見えましたが、台車の音を聞かずに座っていられました」"
+      },
+      {
+        "en": "Reporter: Did you measure the noise? Designer: We did, but we also wanted to know where people actually chose to sit. We left both rooms open for a week and let people carry their books from one to the other.",
+        "jp": "記者「騒音を測ったのですか？」設計担当者「測りましたが、実際にどの席を選ぶかも知りたかったのです。一週間どちらの部屋も開け、本を持って部屋を移れるようにしました」"
+      },
+      {
+        "en": "Reporter: Were the big windows a disadvantage, then? Designer: Only for certain uses. When a group needed to spread papers across a table and talk, they often chose the larger room and closed the door behind them.",
+        "jp": "記者「では、大きな窓は不利だったのでしょうか？」設計担当者「用途によります。グループで資料を机に広げて話すときは、大きな部屋を選び、入ってからドアを閉めることがよくありました」"
+      },
+      {
+        "en": "Reporter: Could people take the same book between the two rooms? Designer: Yes, and a few did so twice, changing rooms as the yard became busier.",
+        "jp": "記者「同じ本を二つの部屋の間で持ち運べたのですか？」設計担当者「はい。中庭が忙しくなるにつれて、二度も部屋を移った人が何人かいました」"
+      },
+      {
+        "en": "Reporter: So will you be adding more chairs to the small room? Designer: Just two. If we made people sit too close together, we might take away the very thing they come here for.",
+        "jp": "記者「では、小さな部屋に椅子を増やす予定ですか？」設計担当者「二脚だけです。席を近づけすぎると、わざわざその部屋を選ぶ理由を損なってしまうかもしれません」"
+      }
+    ],
+    "explanation": "“where people actually chose to sit” は「人が実際にどこを選んで座ったか」という間接疑問です。"
+  },
+  {
+    "id": "c8d1f8bb-cf20-4325-ada6-ddc42511bc37",
+    "difficulty": 2,
+    "outline": "カード大会の表彰で、名前が呼ばれた選手が勝者について説明する。",
+    "paragraphs": [
+      {
+        "en": "The organiser of our card tournament asked the winner of each table to write a name on a card. There was a red box by the door for the cards. Once the box was closed, the organiser would draw a name and give that person a small prize.",
+        "jp": "カード大会の運営担当者は、各テーブルの勝者に、カードに名前を書くよう頼みました。ドアのそばにカードを入れる赤い箱がありました。箱を閉じたら、担当者が名前を一つ引き、その人に小さな賞品を渡すことになっていました。"
+      },
+      {
+        "en": "The last game at our table finished just as people began folding the chairs. Vera picked up the card, wrote something and pushed it through the slot. I had been collecting the playing cards and did not see what she wrote.",
+        "jp": "私たちのテーブルの最後の試合が終わったのは、みんなが椅子をたたみ始めたときでした。ヴェラはカードを取り、何かを書いて投入口に入れました。私はトランプを集めていたので、何を書いたか見ませんでした。"
+      },
+      {
+        "en": "When my name was called, I thought there must be another person with the same name. Vera had won by one point. I went to the front anyway, since everyone at our table was looking at me.",
+        "jp": "自分の名前が呼ばれたとき、同じ名前の人がもう一人いるに違いないと思いました。ヴェラが一点差で勝っていたからです。それでも、同じテーブルのみんなが私を見ていたので、前へ出ました。"
+      },
+      {
+        "en": "Vera followed me and explained that she had written my name because I was the person she had played against. She must have thought the organiser wanted a record of the final game, because she had written the score on the back as well.",
+        "jp": "ヴェラもついてきて、私が対戦相手だったので、私の名前を書いたのだと説明しました。運営担当者が決勝の記録を欲しがっていると思ったに違いありません。裏には点数まで書いてあったのです。"
+      },
+      {
+        "en": "For a moment, I wondered whether the card could simply be put back in the box. The organiser asked us to wait while she checked the list from our table.",
+        "jp": "一瞬、カードを箱に戻せばよいのではと思いました。担当者は、私たちのテーブルの記録を確認するので待つよう言いました。"
+      },
+      {
+        "en": "The organiser checked the score and handed the prize to Vera. On the way out, I looked into the red box and saw several cards with two names on them. I wondered how many people had understood the instructions in exactly the same way.",
+        "jp": "担当者は点数を確かめ、ヴェラに賞品を渡しました。帰り際に赤い箱をのぞくと、名前が二つ書かれたカードが何枚かありました。まったく同じように説明を理解した人が何人いたのだろうと思いました。"
+      }
+    ],
+    "explanation": "“must have thought” は過去の出来事についての強い推測で、「そう思ったに違いない」という意味です。"
+  },
+  {
+    "id": "b8a3e912-7342-4256-aef0-1d25d0a68dbb",
+    "difficulty": 2,
+    "outline": "共同の工房で作った器を見分けるため、焼く前にどこへ印を付けるか説明する。",
+    "paragraphs": [
+      {
+        "en": "In a shared pottery class, several people may make bowls of almost the same shape. They can usually recognise their own work while it is on the table in front of them. A week later, when all the bowls have been placed on one shelf, the difference may be harder to see.",
+        "jp": "共同の陶芸教室では、何人かがほとんど同じ形の器を作ることがあります。自分の前の机に載っている間は、たいてい自分の作品を見分けられます。一週間後、すべての器が一つの棚に並ぶと、違いが見えにくいかもしれません。"
+      },
+      {
+        "en": "Our teacher asks us to put a mark on each piece before we leave it to dry. Most people put the mark on the bottom so that it will not be part of the finished design. The mark only needs to be deep enough to read when the piece is turned over.",
+        "jp": "先生は、作品を乾かすために置いておく前に、一つずつ印を付けるように言います。多くの人は、完成したときの模様の一部にならないよう、底に印を付けます。裏返したときに読める程度の深さで十分です。"
+      },
+      {
+        "en": "For some shapes, there is no need to hide the mark. One student uses a row of three small dots just below the rim of every cup. She can find her cups without touching anyone else's work.",
+        "jp": "形によっては、印を隠す必要はありません。ある生徒は、どのカップにも縁のすぐ下に小さな点を三つ並べます。ほかの人の作品に触れずに自分のカップを見つけられます。"
+      },
+      {
+        "en": "Another student leaves a shallow line near the handle and uses the same mark on the matching plate.",
+        "jp": "別の生徒は取っ手の近くに浅い線を付け、おそろいの皿にも同じ印を使います。"
+      },
+      {
+        "en": "Anything that can be seen from above is useful when the shelf is crowded. If you want the inside of a bowl to be plain, however, the bottom may still be the better choice.",
+        "jp": "棚が混み合っているときは、上から見える印が役に立ちます。ただし、器の内側を無地にしたければ、やはり底のほうがよいかもしれません。"
+      },
+      {
+        "en": "I began with my initials on the bottom. Now I leave a tiny line beside one edge, where I can see it whenever I put the bowl away. It reminds me which side I was looking at when I made it.",
+        "jp": "私は最初、底に自分のイニシャルを書きました。今は器をしまうときに見えるよう、縁の一か所に小さな線を残します。作っていたときにどちら側を見ていたか思い出せるのです。"
+      }
+    ],
+    "explanation": "“anything that can be seen from above” の “that” 以下は、上から見える印を指しています。"
+  },
+  {
+    "id": "24a35d64-446a-4804-adce-a86767c404d4",
+    "difficulty": 2,
+    "outline": "地域の月の観察会で、見る場所と、見えなかった場合の過ごし方を案内する。",
+    "paragraphs": [
+      {
+        "en": "At Friday's meeting, we will look for a thin waxing crescent Moon from the open ground behind the community hall. Please meet us at the gate ten minutes before sunset so there is time to find a place with a clear view towards the west.",
+        "jp": "金曜の集まりでは、集会所の裏の空き地から、新月から満ち始めた細い月を探します。西のほうを遮るものなく見渡せる場所を探す時間が取れるよう、日の入りの10分前に門のところへ集まってください。"
+      },
+      {
+        "en": "If you have only seen the Moon high in a dark sky, you may be surprised by how low it can be when we start looking. There are houses to the west of the hall, so we will walk to the far end of the field before we begin.",
+        "jp": "暗い空の高いところにある月しか見たことがないなら、観察を始めるころの月の低さに驚くかもしれません。集会所の西には家があるので、始める前に空き地の奥まで歩きます。"
+      },
+      {
+        "en": "Bring a pencil and a sheet of paper. We are going to mark the roof or tree nearest to the place where we first see the Moon. Anyone who cannot see it yet can use the mark to narrow down where to look.",
+        "jp": "鉛筆と紙を一枚持ってきてください。最初に月が見えたところにいちばん近い屋根や木を目印として記します。まだ月が見えない人は、その目印を使って探す範囲を狭められます。"
+      },
+      {
+        "en": "One person will keep a record of the time at which each mark was made. If two people point to different places, we will check whether they are standing in the same spot before we decide where to put the mark.",
+        "jp": "一人が、それぞれの印を付けた時刻を記録します。二人が別の場所を指したら、印をどこに付けるか決める前に、二人が同じ位置に立っているか確認します。"
+      },
+      {
+        "en": "If there are clouds, we will watch the gaps between them for a short while. Whether or not it appears, we will draw the view from the field before we go indoors. That drawing will be useful the next time we meet at the same gate.",
+        "jp": "雲があれば、しばらく雲の隙間に目を向けます。月が見えるかどうかにかかわらず、中へ入る前に空き地からの眺めを絵に描きます。次に同じ門に集まるとき、その絵が役立ちます。"
+      }
+    ],
+    "explanation": "“whether or not it appears” は「見えるかどうかにかかわらず」という意味です。"
+  },
+  {
+    "id": "34c62653-57d2-49ff-950d-9a95d0d1aa16",
+    "difficulty": 2,
+    "outline": "誘いを断った人と誘った人が、それぞれの事情から返事を読み直す。",
+    "paragraphs": [
+      {
+        "en": "Nina read the invitation while she was standing in a queue. She wanted to go to the picnic, but Saturday was the only day she could help her older brother move. She wrote, “I can't this time,” and sent it before the queue moved.",
+        "jp": "ニーナは列に並んでいるときに誘いのメッセージを読みました。ピクニックには行きたかったのですが、兄の引っ越しを手伝えるのは土曜しかありませんでした。「今回は行けない」と書いて、列が動く前に送りました。"
+      },
+      {
+        "en": "At home she read her message again and thought it might have sounded rude. She started to explain about her brother. Then she deleted the explanation, because she thought that adding it later would make it sound like an excuse.",
+        "jp": "家でもう一度読むと、失礼に聞こえたかもしれないと思いました。兄のことを説明し始めましたが、あとから足すと言い訳に聞こえそうだったので、その説明を消しました。"
+      },
+      {
+        "en": "On the other side of town, Dev was trying to find out how much food to buy. Nina was the first person who had given him a clear answer. He crossed her off the list and was grateful that she had not left him guessing.",
+        "jp": "町の反対側では、デヴがどれだけ食べ物を買うか考えていました。はっきり返事をくれたのはニーナが最初でした。彼は名簿からニーナを消し、行くかどうか迷わせずに済ませてくれてありがたいと思いました。"
+      },
+      {
+        "en": "On Friday evening, he counted the answers again before putting the list away. Three spaces were still blank, and he decided to buy enough bread for one extra person.",
+        "jp": "金曜の晩、名簿をしまう前に返事を数え直しました。まだ三か所が空欄だったので、一人分多くパンを買うことにしました。"
+      },
+      {
+        "en": "When they met on Monday, Nina asked how the picnic had gone. Dev said the weather had been good and there had been just enough bread.",
+        "jp": "月曜に会ったとき、ニーナはピクニックはどうだったか聞きました。デヴは、天気がよく、パンもちょうど足りたと言いました。"
+      },
+      {
+        "en": "He did not mention her message because there had never been anything about it that he wanted to ask.",
+        "jp": "メッセージのことは口にしませんでした。それについて聞きたいことは、そもそもなかったからです。"
+      },
+      {
+        "en": "Nina told him she could come the next time. Dev said he would remember. They walked to the door together without either of them knowing what the other had spent Friday evening thinking about.",
+        "jp": "ニーナは次なら行けると伝えました。デヴは覚えておくと言いました。二人は相手が金曜の晩に何を考えていたか知らないまま、一緒にドアまで歩きました。"
+      }
+    ],
+    "explanation": "“might have sounded rude” は「失礼に聞こえたかもしれない」と、過去の可能性を表します。"
+  },
+  {
+    "id": "7f3f0844-8a3b-4822-8871-370505e13d2a",
+    "difficulty": 2,
+    "outline": "山が霧に隠れても、地図上で自分の位置を判断するために道の形を使う。",
+    "paragraphs": [
+      {
+        "en": "On clear days, it is easy to know which way you are facing on the road above the village. The mountain with two peaks is to the north, and the sea is behind you if you look straight at it.",
+        "jp": "晴れた日は、村の高台にある道で自分がどちらを向いているかすぐに分かります。頂が二つある山が北にあり、その山を正面に見ると海は背後です。"
+      },
+      {
+        "en": "In fog, you may have nothing to look at except the road, a wall and a few gates. A small map may still help, even though you cannot see the mountain or the sea. The useful details are the ones that are close enough to check.",
+        "jp": "霧の中では、道と塀といくつかの門しか目に入らないかもしれません。山も海も見えなくても、小さな地図が役立つ場合があります。役立つのは、確認できるほど近くにある細かなものです。"
+      },
+      {
+        "en": "At the first bend there is a gate set back from the wall. At the second, the wall ends altogether. If you have passed a gate but the wall still continues, you have not reached the second bend.",
+        "jp": "最初のカーブには塀より少し奥に引っ込んだ門があります。二つ目では塀が完全に途切れます。門を通り過ぎても塀が続くなら、まだ二つ目のカーブには着いていません。"
+      },
+      {
+        "en": "A friend and I once walked that road with a map on which neither gate was marked. We drew the first gate in and put a short line where the wall ended. Neither mark was necessary once the fog had cleared.",
+        "jp": "友達と以前、どちらの門も記されていない地図を持ってその道を歩きました。最初の門を描き足し、塀の終わりに短い線を引きました。霧が晴れると、どちらの印も必要なくなりました。"
+      },
+      {
+        "en": "At the second bend, my friend added a short arrow to show which way we had been walking when we drew the line.",
+        "jp": "二つ目のカーブで友達は短い矢印を書き足し、線を描いたとき私たちがどちらへ歩いていたかを示しました。"
+      },
+      {
+        "en": "The marks were still on the map when we used it the following summer. I had forgotten why we made them until we reached the first bend and found that the mountain was hidden again.",
+        "jp": "翌年の夏に使ったとき、地図にはまだ印がありました。なぜ付けたのか忘れていましたが、最初のカーブに着いて山がまた隠れていると分かると、思い出しました。"
+      }
+    ],
+    "explanation": "“even though you cannot see ...” は「〜が見えなくても」という譲歩です。"
+  },
+  {
+    "id": "24a7a319-106a-4333-84e4-021f5e8f7828",
+    "difficulty": 2,
+    "outline": "地域の掲示板を使いやすくするため、掲示の開始日より終了日を重視する提案。",
+    "paragraphs": [
+      {
+        "en": "The noticeboard in our square has room for about twelve sheets of paper. On Saturday I counted nine advertisements for events that had already happened, including a concert from last winter. The remaining notices were pinned over the corners of the old ones.",
+        "jp": "広場の掲示板には、紙を十二枚ほど貼れます。土曜に数えると、昨冬の演奏会を含め、すでに終わった催しの案内が九枚ありました。残りの掲示は、古いものの角に重ねて留めてありました。"
+      },
+      {
+        "en": "Some people have suggested buying a larger board. That would give us more space, but unless the person who put it up comes back, a notice can stay there for months. A larger board would soon have the same problem.",
+        "jp": "もっと大きな掲示板を買うよう提案した人もいます。それなら場所は増えますが、貼った人が戻ってこない限り、掲示は何か月も残ることがあります。大きくしても、じきに同じ問題が起こるでしょう。"
+      },
+      {
+        "en": "I would ask everyone to write a date in the bottom right corner, showing when the notice can come down. On the first Saturday of each month, one volunteer could remove anything whose date had passed.",
+        "jp": "私は、掲示をいつ外してよいか、全員に右下の角に日付を書いてもらいたいです。毎月最初の土曜日に、ボランティアが一人、日付を過ぎたものを外せます。"
+      },
+      {
+        "en": "A notice offering free piano lessons may still be useful a month after it goes up. In that case, the person who wrote it can give it a later date, or put up a fresh copy if the offer is still open.",
+        "jp": "無料のピアノレッスンの案内は、貼って一か月後にも役立つかもしれません。その場合、書いた人は先の日付を付けられますし、まだ募集しているなら新しい紙を貼ることもできます。"
+      },
+      {
+        "en": "To avoid removing a current notice by mistake, the volunteer could leave anything whose date was hard to read and ask about it at the next meeting.",
+        "jp": "有効な掲示を間違って外さないよう、日付が読みにくいものは残し、次の集まりで確認してもよいでしょう。"
+      },
+      {
+        "en": "The system would make it possible to clear the board without guessing which offers were still good. It would also leave room for a notice put up on Friday about something happening the very next morning.",
+        "jp": "この仕組みなら、どの案内がまだ有効か推測せずに掲示板を片付けられます。金曜に貼る、翌朝すぐの催しの案内にも場所を空けておけます。"
+      }
+    ],
+    "explanation": "“unless the person who put it up comes back” は「貼った人が戻ってこない限り」という条件です。"
+  },
+  {
+    "id": "36721c12-3403-4f25-bab9-93a775e4f858",
+    "difficulty": 2,
+    "outline": "巣箱を撮影するカメラの位置を変えながら、鳥がその場所を使うか観察する。",
+    "paragraphs": [
+      {
+        "en": "I put a small camera near the nest box in our garden because I wanted to see which birds visited while I was at school. From the first position, the camera showed the whole tree. Any bird at the box looked like a dark mark beside a branch.",
+        "jp": "学校にいる間にどんな鳥が来るか見たくて、庭の巣箱の近くに小さなカメラを置きました。最初の位置からは木全体が映りました。巣箱に来た鳥は、枝のそばの黒っぽい点にしか見えませんでした。"
+      },
+      {
+        "en": "The next day I moved it nearer. I could see the entrance clearly on the screen, but the recording showed no visits while I was away. I checked the recordings from both days and discovered that the closer I put the camera, the less I could tell about what was happening around the tree.",
+        "jp": "翌日、もっと近づけました。画面では入り口がはっきり見えましたが、留守の間に鳥が来た様子は、録画には映っていませんでした。二日分の録画を見ると、カメラを近くに置くほど、木の周りで何が起きているか分からなくなることに気づきました。"
+      },
+      {
+        "en": "My older brother, who had been sitting in the garden that afternoon, said he had seen a bird on the far side of the tree. He could not say whether it had gone into the box. That part of the tree was hidden from his chair.",
+        "jp": "その午後、庭に座っていた兄は、木の向こう側で鳥を見たと言いました。巣箱に入ったかどうかは分かりませんでした。椅子からは木のその部分が見えなかったのです。"
+      },
+      {
+        "en": "He showed me the branch where he had seen it land. The branch was just outside the edge of both recordings, although I could see its shadow in the first one.",
+        "jp": "兄は鳥がとまった枝を指さしました。その枝はどちらの映像でも画面のすぐ外でしたが、最初の映像にはその影が見えました。"
+      },
+      {
+        "en": "I took the camera down and drew a picture showing what each position could see. There was no place from which the whole garden would fit in one picture. I left the box alone and decided to note where the birds landed when I was outside.",
+        "jp": "カメラを外し、それぞれの位置から何が見えるか絵に描きました。庭全体が一枚に収まる場所はありませんでした。巣箱はそのままにし、外にいるとき鳥がどこにとまるか記録することにしました。"
+      }
+    ],
+    "explanation": "“the closer I put the camera, the less ...” は「カメラを近くに置くほど、〜することが少なくなった」という比較です。"
+  },
+  {
+    "id": "81968d45-6332-4287-99c2-49e3b46cea78",
+    "difficulty": 2,
+    "outline": "招かれた家でお茶を先に注いだ客が、相手の家ではいつ注ぐのかを聞く。",
+    "paragraphs": [
+      {
+        "en": "On my first visit to Dima's house, his grandmother brought out a teapot and three small cups. I poured tea for everyone before she sat down. Dima looked at the cups and then at his grandmother, who was still holding a plate of cakes.",
+        "jp": "初めてディマの家を訪ねたとき、彼の祖母が急須と小さなカップを三つ出しました。祖母が座る前に、私が全員にお茶を注ぎました。ディマはカップを見てから、まだ菓子の皿を手にしている祖母を見ました。"
+      },
+      {
+        "en": "At home, the person closest to the pot usually pours. I had not thought of it as a custom until I saw Dima move the pot back to the side of the table where his grandmother had put it.",
+        "jp": "うちでは、いちばん急須に近い人がたいてい注ぎます。ディマが、祖母が置いていた側に急須を戻すのを見るまで、それを習慣だと考えたことはありませんでした。"
+      },
+      {
+        "en": "His grandmother said there was no reason to put it back now that the cups were full. She sat down and asked who had taught me to pour before anyone had taken a cake.",
+        "jp": "祖母は、もうカップにお茶が入っているのだから、戻す必要はないと言いました。座ると、誰も菓子を取らないうちに注ぐよう、誰に教わったのか尋ねました。"
+      },
+      {
+        "en": "I said that I probably learned it from my older sister, who always wanted to have something to drink before she ate. Dima's grandmother laughed and said that she liked to find out which cake a guest had chosen before offering the tea.",
+        "jp": "たぶん姉から覚えたのだと答えました。姉は食べる前にいつも飲み物が欲しかったのです。ディマの祖母は笑い、客がどの菓子を選んだか見てからお茶を勧めるのが好きだと言いました。"
+      },
+      {
+        "en": "I watched her choose a cake with a little fruit on top. She poured less tea for herself than I had given her, but she did not say which way was better.",
+        "jp": "祖母が果物を少し載せた菓子を選ぶのを見ました。祖母は私が注いだときより少なめに自分のお茶を注ぎましたが、どちらがよいとは言いませんでした。"
+      },
+      {
+        "en": "At the next visit, she left the pot by my hand again. This time I waited until she took a cake. She waited until I moved my cup closer, and then told me to go ahead.",
+        "jp": "次に訪ねたときも、祖母は私の手元に急須を置きました。今度は、祖母が菓子を取るまで待ちました。祖母は私がカップを近づけるまで待ってから、どうぞと言いました。"
+      }
+    ],
+    "explanation": "“there was no reason to put it back” は「それを元に戻す理由はなかった」という意味です。"
+  },
+  {
+    "id": "427cf744-60fe-4c37-ba80-4c86c069c9b1",
+    "difficulty": 2,
+    "outline": "二つの温度計の値が違うときに、置き場所や測っているものを確かめる。",
+    "paragraphs": [
+      {
+        "en": "At noon, one thermometer in our yard showed a higher number than the other. The higher one was on a dark wall where the sun had been shining since breakfast. The lower one hung under the steps.",
+        "jp": "正午、庭の二つの温度計のうち一方が、もう一方より高い数値を示しました。高いほうは、朝食のころから日が当たっていた色の濃い壁にありました。低いほうは階段の下につるしてありました。"
+      },
+      {
+        "en": "My older brother said that the thermometer by the wall must be wrong. I brought both into the house and left them side by side. After a while, they showed nearly the same number.",
+        "jp": "兄は、壁のそばの温度計が間違っているに違いないと言いました。二つとも家へ持ち込み、並べて置きました。しばらくすると、ほとんど同じ数値を示しました。"
+      },
+      {
+        "en": "We took them out again and switched their places. This time, the thermometer that had shown the lower number became the warmer one. The difference had followed the place, not the instrument.",
+        "jp": "また外へ持ち出し、置く場所を入れ替えました。今度は低い数値を示していたほうが高くなりました。違いは温度計ではなく、置く場所について動いたのです。"
+      },
+      {
+        "en": "We moved both thermometers into the shade and hung them at the same height before reading them. This made the numbers closer, though they were not exactly the same. One was still near the stones below the steps, which felt warm when I put a hand on them.",
+        "jp": "二つとも日陰に移し、同じ高さにつるしてから値を読みました。数値は近づきましたが、まったく同じにはなりませんでした。一つはまだ階段下の石の近くで、その石は手で触れると暖かく感じられました。"
+      },
+      {
+        "en": "My brother wrote the two numbers down without circling either of them. He asked whether the yard could have two answers at the same time.",
+        "jp": "兄はどちらにも丸を付けず、二つの数値を書き留めました。同じ時刻でも庭には二つの答えがありうるのかと聞きました。"
+      },
+      {
+        "en": "We wanted to keep one thermometer outside as long as it stayed in the shade. We chose a place away from the wall and noted the time we read it. Now when my brother asks how warm it is, I can give him a number and tell him where it came from.",
+        "jp": "日陰にある限り、温度計を一つ外に置いておきたいと思いました。壁から離れた場所を選び、値を読んだ時刻を書きました。今では兄にどれくらい暖かいか聞かれると、数値に加え、どこで測ったかも伝えられます。"
+      }
+    ],
+    "explanation": "“as long as it stays in the shade” は「日陰にある限り」という意味です。"
+  },
+  {
+    "id": "16f71fa5-bd2c-4cd2-a4b5-8af274d5e47e",
+    "difficulty": 2,
+    "outline": "約束の場所で友人を待ちながら、語り手が自分の時間の使い方に気づく。",
+    "paragraphs": [
+      {
+        "en": "I had arranged to meet Jo at the entrance to the winter fair. When I arrived, there was a message saying she had missed her bus and might be half an hour late. I wrote back that I would wait.",
+        "jp": "冬の市の入り口でジョーと会う約束をしていました。着くと、バスに乗り遅れて30分ほど遅れるかもしれないと連絡がありました。待っていると返しました。"
+      },
+      {
+        "en": "For the first ten minutes, I watched the road. Then I noticed a family on the other side of the gate trying to take a photograph with everyone in it.",
+        "jp": "最初の10分は道路を見ていました。それから門の向こうで、全員が入るよう写真を撮ろうとしている一家に気づきました。"
+      },
+      {
+        "en": "I offered to hold the phone. They asked me to take a second picture because the youngest child had closed his eyes.",
+        "jp": "スマートフォンを預かって撮りましょうかと声をかけました。いちばん小さい子が目を閉じていたので、もう一枚頼まれました。"
+      },
+      {
+        "en": "While I was handing the phone back, Jo sent another message. She said the next bus had not come and told me to go in without her. I looked at the entrance, where I could already smell the apples being cooked at the first stall.",
+        "jp": "スマートフォンを返している間に、ジョーからまた連絡が来ました。次のバスが来ないから先に入ってと言われました。入り口を見ると、最初の屋台で火を通しているリンゴのにおいが、もうこちらまで届いていました。"
+      },
+      {
+        "en": "I decided to stay five more minutes, even if she didn't come. It was the first time that afternoon that I had decided how long I would wait, instead of letting the bus decide for me.",
+        "jp": "たとえ彼女が来なくても、あと5分はそこにいることにしました。その午後、バス任せにせず自分で待つ時間を決めたのは、これが初めてでした。"
+      },
+      {
+        "en": "I stopped looking at the road and watched the stallholder put the paper cups in a row.",
+        "jp": "道路を見るのをやめ、屋台の人が紙カップを一列に並べるのを眺めました。"
+      },
+      {
+        "en": "When the five minutes were up, I went in and bought one warm apple. I ate it slowly, standing beside the stall.",
+        "jp": "5分が過ぎると、中へ入って温かいリンゴを一つ買いました。屋台のそばに立ち、ゆっくり食べました。"
+      },
+      {
+        "en": "Then I sent Jo a picture of the empty paper cup with the stall's name just behind it, so she would know exactly where to find me.",
+        "jp": "それから空の紙カップの後ろに屋台の名前が写るよう写真を撮り、それをジョーに送りました。そうすれば、どこに行けば私に会えるか、はっきり分かると思ったのです。"
+      }
+    ],
+    "explanation": "“even if she didn't come” は「たとえ彼女が来なくても」という譲歩の条件です。"
+  },
+  {
+    "id": "c2682747-eb90-49f5-959b-2aaad403e5a4",
+    "difficulty": 2,
+    "outline": "古い校庭の写真にある小さな四角が、年代によって別の使われ方をしていたと分かる。",
+    "paragraphs": [
+      {
+        "en": "In a photograph taken before the school was rebuilt, there is a white square in one corner of the playground. It was too small for a game, and it was not joined to any of the other lines. I asked three former pupils what they remembered about it.",
+        "jp": "学校の建て替え前に撮られた写真では、校庭の隅に白い四角があります。競技に使うには小さすぎて、ほかのどの線にもつながっていませんでした。卒業生三人に、何を覚えているか尋ねました。"
+      },
+      {
+        "en": "The first remembered standing in it while she waited for her father. The teacher had told her that if she stood there, adults could see her from the gate without coming inside.",
+        "jp": "一人目は、父を待つ間にそこに立ったことを覚えていました。そこに立てば、大人は中に入らなくても門のところから見つけられると先生に言われたそうです。"
+      },
+      {
+        "en": "The second said that by the time their class arrived, the square was where sports equipment was left at lunchtime. If a ball rolled out, someone had to bring it back before the bell.",
+        "jp": "二人目によると、その人たちのクラスが来るころには、四角は昼休みに運動用具を置く場所でした。ボールが転がり出たら、誰かがベルの前に戻さなければならなかったそうです。"
+      },
+      {
+        "en": "The third remembered drawing the line with a teacher after one of its sides had worn away. He could not remember what the square was for, only that the teacher had asked him to hold one end of a string while she marked the other.",
+        "jp": "三人目は、一辺がすり減って消えたあと、先生と線を引いたことを覚えていました。四角の用途は覚えておらず、先生が片方に印を付ける間、ひものもう一方の端を持つよう頼まれたことだけ覚えていました。"
+      },
+      {
+        "en": "The photograph had been taken from the street, and the square was close enough to the gate to be seen in every picture from that angle.",
+        "jp": "写真は通りから撮られていました。四角は門に十分近かったので、その角度からの写真にはどれにも写っていました。"
+      },
+      {
+        "en": "I had been looking for the person who knew the original purpose. When I put the answers in order by year, they made a different story possible. The square could stay in the same place without having the same job.",
+        "jp": "私は、もともとの用途を知る人を探していました。答えを年代順に並べると、別の話が見えてきました。四角は同じ場所にあっても、同じ役割とは限らなかったのです。"
+      }
+    ],
+    "explanation": "“by the time their class arrived” は「その人たちのクラスが来るまでに」です。"
+  },
+  {
+    "id": "875c536c-b482-4a8d-a670-199c92b4d28d",
+    "difficulty": 2,
+    "outline": "質問に一つだけ答える部屋で、訪ねてきた少年が尋ねる内容を選ぶ。",
+    "paragraphs": [
+      {
+        "en": "There was a room at the end of the palace that could answer one question from each visitor. A notice on the door said that a question did not count unless you asked it aloud. This was why people often spent a long time inside without making a sound.",
+        "jp": "宮殿の端には、訪れた人一人につき質問一つに答えられる部屋がありました。ドアには、声に出して尋ねない限り質問として数えないと書いてありました。そのため、長い時間を中で一言も発さずに過ごす人がよくいました。"
+      },
+      {
+        "en": "A boy named Sam went there to find out where his father had hidden the key to their boat. His father was away, and Sam had promised to bring a basket across the lake before dark.",
+        "jp": "サムという少年は、父が舟の鍵をどこに隠したか知るために行きました。父は留守で、サムは暗くなる前に湖の向こうへかごを届ける約束をしていました。"
+      },
+      {
+        "en": "Inside the room, he put the basket down and noticed a dark stain on the bottom. He opened it and found that the jar inside was leaking. He knew where to find another jar, but he would have to go home first.",
+        "jp": "部屋の中でかごを置くと、底に黒っぽい染みがあることに気づきました。開けてみると、中の瓶から液が漏れていました。別の瓶の場所は分かっていましたが、まず家に戻る必要がありました。"
+      },
+      {
+        "en": "He almost asked how long it would take to walk around the lake. Then he remembered that his neighbour walked that way every morning. He could ask her without using his only question.",
+        "jp": "湖を歩いて回るとどれくらいかかるか、聞きかけました。それから、近所の人が毎朝その道を歩いていることを思い出しました。その人に聞けば、唯一の質問を使わずに済みます。"
+      },
+      {
+        "en": "He thought about asking whether the person across the lake really needed the basket that day. The longer he stood there, the more that sounded like something he ought to ask the person directly.",
+        "jp": "湖の向こうの人が本当にその日にかごを必要としているか聞こうかと思いました。そこに長く立っているほど、本人に直接聞くべきことに思えてきました。"
+      },
+      {
+        "en": "Sam picked up the basket and left the room. At the door, the guard asked whether he had found his answer. Sam said he had found someone else to ask, which was enough for today.",
+        "jp": "サムはかごを持ち上げ、部屋を出ました。ドアで番人が、答えが見つかったか聞きました。ほかに尋ねられる人が見つかったので、今日はそれで十分だとサムは答えました。"
+      }
+    ],
+    "explanation": "“unless you ask it aloud” は「声に出して尋ねない限り」という意味です。"
+  },
+  {
+    "id": "920fae60-d6f2-4025-aee9-c88ead994e4d",
+    "difficulty": 2,
+    "outline": "歩道に置かれた椅子を活かしながら、通れる幅を残す方法を提案する。",
+    "paragraphs": [
+      {
+        "en": "There are three chairs outside the bakery on Hall Street. I often see people sit there while they wait for a friend or put their shopping into a bag. In summer, the chairs are usually the first places to be taken when the bakery opens.",
+        "jp": "ホール通りのパン屋の外には椅子が三脚あります。友達を待ったり、買ったものをかばんに入れたりする間、そこに座る人をよく見ます。夏には、パン屋が開くとたいてい真っ先に埋まる席です。"
+      },
+      {
+        "en": "When someone pulls a chair away from the wall, however, there is very little space left on the pavement. Last week I watched two people with pushchairs stop on either side of the bakery and wait for one another to pass.",
+        "jp": "ところが、誰かが椅子を壁から引き離すと、歩道にはほとんど幅が残りません。先週は、ベビーカーを押す二人がパン屋の両側で立ち止まり、相手が先に通るのを待つところを見ました。"
+      },
+      {
+        "en": "I would like the bakery to keep the chairs but move them to the other end of the window. That part of the pavement is wider, and a person could go past without having to step into the road.",
+        "jp": "パン屋には椅子を残し、窓の反対側の端へ移してほしいと思います。そこは歩道が広く、車道に出なくても通り過ぎられます。"
+      },
+      {
+        "en": "There is one drawback: the new spot gets very little shade after eleven. The bakery could leave a single chair in the shade on hot mornings, as long as it stayed against the wall.",
+        "jp": "一つ欠点があります。移動先は11時を過ぎると日陰がほとんどありません。暑い日の朝には、壁際に寄せたままにするという条件で、日陰に一脚だけ残してもよいでしょう。"
+      },
+      {
+        "en": "We could try the new position for a week and ask the people who deliver flour whether there is still room for their trolley.",
+        "jp": "新しい位置を一週間試し、小麦粉を配達する人に台車を通せる幅がまだあるか聞いてもよいでしょう。"
+      },
+      {
+        "en": "The point of moving the chairs is to make room for two ordinary things at once. Some people need to stop. Others need to keep going, and both should be able to do so on the same pavement.",
+        "jp": "椅子を動かすのは、二つの当たり前のことに同時に場所をつくるためです。立ち止まりたい人もいます。先に進む必要がある人もいて、同じ歩道でどちらもできるといいと思います。"
+      }
+    ],
+    "explanation": "“without having to step into the road” は「車道に出ずに済むように」という意味です。"
+  },
+  {
+    "id": "ad028c38-80c0-49e8-9c07-c9d06b4c2faa",
+    "difficulty": 2,
+    "outline": "答えを当てた人が出題者になる言葉遊びを紹介する。",
+    "paragraphs": [
+      {
+        "en": "The first time we played this game, we were waiting for a table in a crowded café. We needed something that could be played without moving from the queue or taking anything out of our bags.",
+        "jp": "初めてこの遊びをしたのは、混んだカフェで席を待っていたときでした。列を離れたりかばんから何か出したりせずに遊べるものが必要でした。"
+      },
+      {
+        "en": "One person picks something they can see and gives the others three clues. The clues can use any words except the word that names it. For example, “It is red, it has four legs, and nobody is sitting on it” might describe a chair.",
+        "jp": "一人が見えるものを一つ選び、ほかの人に三つのヒントを出します。そのものの名前以外は、どんな言葉を使ってもかまいません。たとえば「赤くて、脚が四本あり、誰も座っていない」なら、椅子かもしれません。"
+      },
+      {
+        "en": "Anyone who thinks they know the answer can make a guess. The first person to get it right has to choose the next thing. That rule matters because guessing quickly means you have less time to think of your own clues.",
+        "jp": "答えが分かったと思った人は誰でも答えられます。最初に正解した人は、次の物を選ばなければなりません。早く当てるほど自分のヒントを考える時間が短くなるので、そのルールには意味があります。"
+      },
+      {
+        "en": "At the café, my older sister guessed “window” before I had finished my second clue. Then she looked around and chose something so close to us that no one had thought to look at it. It was the small number printed on the card we had been given at the door.",
+        "jp": "カフェでは、姉が二つ目のヒントを言い終わる前に「窓」と当てました。それから周りを見回し、すぐ近くにありすぎて誰も見ようとしなかったものを選びました。入り口で渡された札に印刷された小さな番号でした。"
+      },
+      {
+        "en": "Someone guessed that it was the price of a cake. Another person thought it was the time on the clock, although there were no hands in any of the clues.",
+        "jp": "ケーキの値段だと答えた人がいました。時計の時刻だと思った人もいましたが、どのヒントにも時計の針は出てきませんでした。"
+      },
+      {
+        "en": "When our number was finally called, it was the only answer nobody had managed to guess. My sister still counts that round as hers.",
+        "jp": "ようやく番号を呼ばれたとき、それは誰も当てられなかった唯一の答えでした。姉は今でも、あの回は自分の勝ちに数えています。"
+      }
+    ],
+    "explanation": "“except the word that names it” の “except” は「〜を除いて」という意味です。"
+  },
+  {
+    "id": "5c428f39-96d0-475f-8301-af5253f695aa",
+    "difficulty": 2,
+    "outline": "合唱の伴奏者が、歌い手とピアノの位置を入れ替えたときの聞こえ方を伝える。",
+    "paragraphs": [
+      {
+        "en": "Dear Kim, You asked why I wanted to move the piano before the next rehearsal. I should have explained while we were still in the hall, but I did not understand it properly myself until I had stood where the singers usually stand.",
+        "jp": "キムへ。次の練習の前に、なぜピアノを動かしたいのか聞いていたね。まだホールにいる間に説明すべきだったけれど、歌う人がふだん立つ場所に自分で立ってみるまで、私にもよく分かっていなかった。"
+      },
+      {
+        "en": "I had been facing the audience while I played, with the singers behind my left shoulder. When they sang quietly, I could hear their words clearly enough to know when to come in. From their places, however, the piano was much louder than I had imagined.",
+        "jp": "私は観客席を向いて弾いていて、歌い手たちは左肩の後ろにいた。小さな声で歌っているときには、いつ弾き始めるか分かる程度には歌詞が聞こえた。でも、みんなの立ち位置では、ピアノは私が想像していたよりずっと大きく聞こえた。"
+      },
+      {
+        "en": "Nora played the same part while I stood at the back. I lost the first words of each line, even though I knew exactly what they were. I think this is why two people asked us to begin more slowly last week.",
+        "jp": "私が後ろに立っている間、ノラが同じ箇所を弾いた。歌詞を正確に知っていたのに、行の初めの言葉が聞き取れなかった。先週二人から、もっとゆっくり始めてと言われたのは、このせいだと思う。"
+      },
+      {
+        "en": "When I walked back to the piano, I could hear the singers again before I reached my own seat. Nora had not changed the way she was playing. We tried the ending once more, with two of the singers standing beside me, and they heard the same difference.",
+        "jp": "ピアノへ戻る途中、自分の席に着く前に歌がまた聞こえるようになった。ノラは弾き方を変えていなかった。歌い手二人に私のそばに立ってもらい、最後をもう一度試すと、二人にも同じ違いが聞こえた。"
+      },
+      {
+        "en": "Could we turn the piano a little so that it points towards the empty side of the hall? We could sing just one verse in each position before deciding. I will bring the shorter song, which has the quietest beginning.",
+        "jp": "ピアノを少し回して、ホールの人がいない側に向けられないかな。決める前に、それぞれの位置で一番だけ歌ってみられる。始まりがいちばん静かな、短いほうの曲を持っていくね。"
+      }
+    ],
+    "explanation": "“had been facing the audience” は過去完了進行形で、その時点より前から観客席を向いていたことを表します。"
+  },
+  {
+    "id": "fc2d960a-7d5f-445d-9f10-e4a6758ef1b6",
+    "difficulty": 2,
+    "outline": "地域の花壇で、苗を見栄えだけで選ばず、植える場所に合うものを考える。",
+    "paragraphs": [
+      {
+        "en": "At the spring planting day, there were two trays of seedlings on the table. One tray held tall plants that already looked good in their pots. The other held short plants that had only a few leaves.",
+        "jp": "春の植え付けの日、机には苗のトレーが二つありました。一方には鉢に入ったままでも見栄えのする背の高い苗がありました。もう一方は、葉が数枚しかない背の低い苗でした。"
+      },
+      {
+        "en": "Most people reached for the tall ones. Our organiser did too, when she chose plants for the boxes near the entrance. She wanted the people coming in that afternoon to see something above the edge of each box.",
+        "jp": "たいていの人は背の高いほうに手を伸ばしました。入り口近くのプランター用に選ぶときは、運営担当の人もそうしました。その午後に来る人に、プランターの縁より上に植物が見えてほしかったのです。"
+      },
+      {
+        "en": "For the bed at the back, she asked us to use the short ones. Those plants had room to spread, and there were other flowers nearby to look at while they grew.",
+        "jp": "奥の花壇には背の低いほうを使うよう頼まれました。そこなら苗が広がる場所があり、育つ間に眺められるほかの花も近くにありました。"
+      },
+      {
+        "en": "By the gate we put the tall plants near the corners, where their leaves would show above both sides of the boxes. Behind the main flower bed we spaced the small plants out, leaving much more bare soil between them than I would have left in the boxes.",
+        "jp": "門のそばでは、背の高い苗をプランターの角に寄せ、二つの側面の上に葉が出るようにしました。主な花壇の奥では背の低い苗を間隔を空けて植え、私がプランターなら空けなかったほど広く、苗の間に土を残しました。"
+      },
+      {
+        "en": "A visitor stopped by the gate and took a picture, but walked straight past the back bed. The organiser said she would ask him to come back in July.",
+        "jp": "来園者が門のそばで止まって写真を撮りましたが、奥の花壇はそのまま通り過ぎました。担当者は、7月にまた来るよう声をかけると言いました。"
+      },
+      {
+        "en": "I had thought we were choosing which tray contained the better plants. She was thinking about what would happen after the trays were empty. One part of the garden had to be ready by lunchtime, while the other had most of the summer ahead of it.",
+        "jp": "私はどちらのトレーによりよい苗が入っているかを選んでいると思っていました。担当者は、トレーが空になったあとに何が起こるかを考えていました。庭の一部は昼食のころには見せられる状態である必要がありましたが、もう一方には夏の大半が残されていたのです。"
+      }
+    ],
+    "explanation": "“what would happen after the trays were empty” は「苗のトレーが空になったあとに何が起こるか」という意味です。"
+  },
+  {
+    "id": "f0cb70b8-f7e1-4be9-96ba-b78a4ea6d7a8",
+    "difficulty": 2,
+    "outline": "学校新聞の担当者が、記事に載せる名前のつづりを本人に確認する。",
+    "paragraphs": [
+      {
+        "en": "I was preparing a short article about the people who had painted the wall beside the gym. My notes gave me five names, but one was written so quickly that I could not tell whether the last letter was an a or an o.",
+        "jp": "体育館のそばの壁に絵を描いた人たちについて、短い記事を作っていました。メモには五人の名前がありましたが、一人だけ急いで書いたため、最後の文字がaかoか分かりませんでした。"
+      },
+      {
+        "en": "A friend said the school had published a list of the painters the year before. I found it in an old newsletter. The name ended in an a there, and I almost copied it into the article.",
+        "jp": "友達が、前年に学校が描き手の一覧を出していたと言いました。古い広報紙でそれを見つけました。そこでは名前の最後がaだったので、記事にそのまま写すところでした。"
+      },
+      {
+        "en": "Then I remembered the young man had introduced himself twice while we talked. He had paused the second time and said the last sound on its own, as though people had missed it before.",
+        "jp": "それから、話していたとき、その若い人が二度名乗ったことを思い出しました。二度目には間を置き、以前も聞き落とされたことがあるかのように、最後の音だけを言っていました。"
+      },
+      {
+        "en": "I sent a message asking him to type the name as he wanted it printed. He replied with an o and said the newsletter had got it wrong. Had I used the old list, there would have been two publications with the same mistake.",
+        "jp": "記事に載せてほしいとおりの名前を入力して送ってほしいと連絡しました。彼はoで終わる名前を送り、広報紙が間違っていたと答えました。古い一覧を使っていたら、二つの刊行物に同じ誤りが載るところでした。"
+      },
+      {
+        "en": "I also asked the editor of the newsletter to correct the list in the next issue. She told me the same list had been copied onto a notice outside the gym.",
+        "jp": "広報紙の編集者にも、次の号で一覧を直してほしいと頼みました。編集者によると、同じ一覧が体育館の外の掲示にも写されていました。"
+      },
+      {
+        "en": "After the article came out, he sent me a photograph of his name beside the picture of the wall. I could not see much of the painting in the photograph. That was not the part he had taken it to show me.",
+        "jp": "記事が出ると、壁の写真のそばに載った自分の名前を撮って送ってくれました。その写真では絵の多くは見えませんでした。そこを見せるために撮ったのではなかったのです。"
+      }
+    ],
+    "explanation": "“had I used ...” は “if I had used ...” と同じで、使っていた場合を仮定します。"
+  },
+  {
+    "id": "88a08baa-63bd-42e6-a91c-428f797e9cfb",
+    "difficulty": 2,
+    "outline": "庭の水皿が毎朝空になるので、語り手が夜の来客を待つ。",
+    "paragraphs": [
+      {
+        "en": "For several mornings, the shallow dish by our back step had been empty when I got up. I usually filled it in the evening for the birds. I suspected the cat from next door, which sometimes walked along the wall after dark.",
+        "jp": "何日か続けて、朝起きると裏口の段のそばの浅い皿が空でした。ふだんは鳥のために夕方に水を入れていました。日が暮れてからときどき塀の上を歩く、隣の家の猫を疑いました。"
+      },
+      {
+        "en": "On Thursday the neighbour told me that she had kept the cat inside all week. It could not have been the cat unless it had found a way out that neither of us knew about.",
+        "jp": "木曜に、隣の人は今週ずっと猫を家の中に入れていたと言いました。私たちのどちらも知らない外への出方を見つけていない限り、猫だったはずがありません。"
+      },
+      {
+        "en": "I moved the dish closer to the step and sat in the kitchen with the lights off. From the window I could see the pale edge of the dish. I had been waiting for perhaps twenty minutes when I heard a sharp click.",
+        "jp": "皿を段のそばに寄せ、台所の明かりを消して座りました。窓から皿の白っぽい縁が見えました。たぶん20分ほど待ったとき、カチッと鋭い音がしました。"
+      },
+      {
+        "en": "The dish had tipped towards the step. There was no animal beside it, but a drop of water from the roof fell on the raised edge and made it rock again.",
+        "jp": "皿が段のほうへ傾いていました。そばに動物はいませんでしたが、屋根から水滴が持ち上がった縁に落ち、皿がまた揺れました。"
+      },
+      {
+        "en": "I took the dish inside and found a small stone stuck to the bottom. The stone kept one side higher than the other and let the dish rock when a drop struck it. Most of the water must have spilled as it rocked.",
+        "jp": "皿を家に入れると、底に小さな石がくっついていました。石のせいで片側が高くなり、水滴が当たると皿が揺れました。水の大半は揺れるうちにこぼれたのでしょう。"
+      },
+      {
+        "en": "I scraped the stone off, filled the dish and put it back. It was still full in the morning. My neighbour said her cat had spent most of the week asleep on a towel.",
+        "jp": "石を取り除き、皿に水を入れて元の場所に置きました。朝になっても水はいっぱいでした。隣の人の話では、猫はその週の大半をタオルの上で寝て過ごしていたそうです。"
+      }
+    ],
+    "explanation": "“it could not have been the cat” は「猫だったはずがない」と、過去の可能性を否定します。"
+  },
+  {
+    "id": "75afce22-a81d-4cf0-813f-9ff35fa25e56",
+    "difficulty": 2,
+    "outline": "屋台の位置が風で変わる催しで、案内図と当日の目印を使って目的の店を探す。",
+    "paragraphs": [
+      {
+        "en": "The stalls for Sunday's outdoor fair are usually placed in two rows along the north side of the square. This leaves the middle open for people who want to sit down. If the wind comes strongly from the north, however, the stalls will be moved.",
+        "jp": "日曜の屋外市では、ふだん屋台は広場の北側に沿って二列に並びます。座りたい人のために、中央を空けておくためです。ただし、北から強い風が吹けば、屋台は移動します。"
+      },
+      {
+        "en": "In that case, you will find them in a single row beside the long wall at the east end. The map printed in the programme will still show the usual arrangement. We will put a larger map at the entrance with the new positions written on it.",
+        "jp": "その場合は、東端の長い壁のそばに一列で並びます。プログラムに印刷された地図は通常の配置のままです。入り口には新しい位置を書いた大きな地図を出します。"
+      },
+      {
+        "en": "Every stall will keep its own number, regardless of where it has been placed. If you are looking for the potter who usually stands near the fountain, look for number sixteen rather than for the fountain.",
+        "jp": "どこに移動しても、各屋台の番号は変わりません。ふだん噴水のそばにいる陶芸家を探すなら、噴水ではなく16番を目印にしてください。"
+      },
+      {
+        "en": "People who have booked a place at a stall can ask at the entrance if they cannot find its number.",
+        "jp": "屋台での体験を予約した人は、番号が見つからなければ入り口で尋ねられます。"
+      },
+      {
+        "en": "The music and dance groups will still perform at the times shown in the programme. What may change is the direction you need to face. There will be arrows on the ground beside the chairs.",
+        "jp": "音楽とダンスのグループは、プログラムにある時刻どおりに出演します。変わるかもしれないのは、観客が向く方向です。椅子のそばの地面に矢印を出します。"
+      },
+      {
+        "en": "If you are coming to meet someone, agree on a place that will stay the same. The clock by the main gate is a good choice. You can see it from both rows when the stalls are in their usual places and from the wall when they have moved.",
+        "jp": "誰かと待ち合わせるなら、位置が変わらない場所を決めておいてください。正門のそばの時計がおすすめです。屋台がいつもの場所なら両方の列から、移動したなら壁のそばから見えます。"
+      }
+    ],
+    "explanation": "“regardless of where ...” は「どこであっても」という意味です。"
+  },
+  {
+    "id": "13d27d00-f64e-48ce-bfd6-69910c4727e6",
+    "difficulty": 2,
+    "outline": "近所から借りた鍋を返す予定が変わり、玄関のメモで行き違いを防ぐ。",
+    "paragraphs": [
+      {
+        "en": "A note for anyone who comes home before me. The large pot on the kitchen table belongs to Mrs Dean. I told her I would take it back after lunch, but she sent a message saying she would be out until six.",
+        "jp": "私より先に帰る人へ。台所のテーブルにある大きな鍋は、ディーンさんのものです。昼食のあとに返しに行くと言っていましたが、6時まで外出するとの連絡がありました。"
+      },
+      {
+        "en": "The smaller pot beside it is ours. Please leave both where they are unless you need the small one. The lid on top of it actually fits the large pot, so do not take that lid out to the garden.",
+        "jp": "隣の小さい鍋はうちのものです。小さいほうが必要でなければ、両方ともそのままにしてください。上に載っているふたは実は大きい鍋用なので、そのふたを庭に持ち出さないでください。"
+      },
+      {
+        "en": "If Mrs Dean comes to the door before I get back, give her the large pot and check whether she wants the cloth underneath it. She brought the cloth with the pot, but she said we could keep it if we needed it.",
+        "jp": "私が戻る前にディーンさんが来たら、大きな鍋を渡し、下に敷いた布が必要か聞いてください。布も鍋と一緒に持ってきたものですが、必要ならうちに置いてよいと言われました。"
+      },
+      {
+        "en": "By the time you read this, I may already have seen her on my way back from the shop. If so, I will send a message. If there is no message and the pot is gone, please write on this note who took it.",
+        "jp": "これを読むころには、私が店から帰る途中ですでに会っているかもしれません。その場合は連絡します。連絡がなく、鍋もなくなっていたら、誰が持っていったかこの紙に書いてください。"
+      },
+      {
+        "en": "If you do give her the pot, please put our small pot on the shelf where it normally goes. That will keep it out of the way when I make dinner.",
+        "jp": "鍋を渡した場合は、うちの小さい鍋をいつもの棚に戻してください。私が夕食を作るときに邪魔にならずに済みます。"
+      },
+      {
+        "en": "I know this is a great deal to write about one pot. Last time we borrowed it, the lid went back a week before the pot did, and nobody could remember why.",
+        "jp": "鍋一つのことをずいぶん長く書いたのは分かっています。前に借りたときは、鍋より一週間先にふただけが返り、なぜそうなったか誰も思い出せなかったのです。"
+      }
+    ],
+    "explanation": "“by the time you read this” は「これを読むころには」です。"
   }
 ]
